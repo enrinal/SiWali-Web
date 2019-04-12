@@ -2,8 +2,6 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
-<html lang="en">
-
 <head>
 
   <meta charset="utf-8">
@@ -22,44 +20,44 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <link href="<?php echo base_url('assets/css/sb-admin-2.css');?>" rel="stylesheet">
 
 </head>
-<body class="bg-gradient-primary">
-
+<body id="page-top">
   <div class="container">
-
-    <div class="card o-hidden border-0 shadow-lg my-5">
-      <div class="card-body p-0">
-        <!-- Nested Row within Card Body -->
-          <div class="col-xl-auto">
-            <div class="p-5">
-              <div class="text-center">
-                <h1 class="h4 text-gray-900 mb-4">Tambah Dosen!</h1>
-              </div>
-              <form action="<?php echo base_url(). 'admin/tambah_dosen'; ?>" method="post">
-                <div class="form-group">
-                  <input type="name" class="form-control form-control-lg" name="nama" placeholder="Name">
-                </div>
-                <div class="form-group">
-                  <input type="number" class="form-control form-control-lg" name="nip" placeholder="NIP DOSEN">
-                </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control form-control-lg" name="username" placeholder="Username" readonly>
-                  </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control form-control-lg" name="password" placeholder="Password" readonly>
-                  <!-- </div> -->
-                  <input class="btn btn-primary btn-user btn-block" type="submit" value="Input">
-              </form>
+  <div class="card-body">
+  <div class="row">
+    <div class="col-lg-7">
+      <div class="p-5">
+        <div class="text-center">
+          <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+        </div>
+        <form class="user">
+          <div class="form-group row">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+              <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="First Name">
+            </div>
+            <div class="col-sm-6">
+              <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="Last Name">
             </div>
           </div>
-        </div>
+          <div class="form-group">
+            <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email Address">
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+              <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+            </div>
+            <div class="col-sm-6">
+              <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password">
+            </div>
+          </div>
+          <a href="login.html" class="btn btn-primary btn-user btn-block">
+            Register Account
+          </a>
       </div>
     </div>
-
+    </div>
+    </div>
   </div>
 
-
-
-  <!-- Bootstrap core JavaScript-->
   <script src="<?php echo base_url('assets/vendor/jquery/jquery.min.js');?>"></script>
   <script src="<?php echo base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
 
@@ -75,8 +73,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <!-- Page level custom scripts -->
   <script src="<?php echo base_url('assets/vendor/datatables/dataTables.bootstrap4.min.js');?>"></script>
   <script src="<?php echo base_url('assets/js/demo/datatables-demo.js');?>"></script>
-
-
 </body>
-
 </html>

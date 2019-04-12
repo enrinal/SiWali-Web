@@ -32,22 +32,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="col-xl-auto">
             <div class="p-5">
               <div class="text-center">
-                <h1 class="h4 text-gray-900 mb-4">Tambah Dosen!</h1>
+                <h1 class="h4 text-gray-900 mb-4">Tambah Mahasiswa!</h1>
               </div>
-              <form action="<?php echo base_url(). 'admin/tambah_dosen'; ?>" method="post">
+              <form action="<?php echo base_url(). 'admin/tambah_mahasiswa'; ?>" method="post">
                 <div class="form-group">
                   <input type="name" class="form-control form-control-lg" name="nama" placeholder="Name">
                 </div>
                 <div class="form-group">
-                  <input type="number" class="form-control form-control-lg" name="nip" placeholder="NIP DOSEN">
+                  <input type="number" class="form-control form-control-lg" name="nim" placeholder="NIM">
                 </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control form-control-lg" name="username" placeholder="Username" readonly>
+                <div class="form-group">
+                  <input type="number" class="form-control form-control-lg" name="angkatan" placeholder="Angkatan">
+                </div>
+                <div class="form-group">
+                    <select class="form-control form-control-lg" id="exampleFormControlSelect1" name="dosen_wali" placeholder="option">
+                      <option value="" disabled selected>Dosen Wali</option>
+                      <?php foreach($query as $row):?>
+                            <option><?php echo $row->nama_dosen; ?></option>
+                      <?php endforeach;?>             
+                    </select>
+                    </div>
+                  <!-- <div class="form-group">
+                    <input type="text" class="form-control" id="exampleInputEmail" placeholder="Username" readonly>
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control form-control-lg" name="password" placeholder="Password" readonly>
-                  <!-- </div> -->
-                  <input class="btn btn-primary btn-user btn-block" type="submit" value="Input">
+                    <input type="text" class="form-control" id="exampleInputPassword" placeholder="Password" readonly>
+                  </div> -->
+                <input class="btn btn-primary btn-user btn-block" type="submit" value="Input">
               </form>
             </div>
           </div>
