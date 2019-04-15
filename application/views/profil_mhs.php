@@ -33,23 +33,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="row">
 <div class="col-md-10 ">
 <form class="form-horizontal">
-<fieldset>
 
+
+
+<div class="left">
+	<h2>Profile Mahasiswa</h2> 
+
+</div> 
 <hr>
-
-<div class="row">
-<div class="col-md-4"></div>
-
-<div class="col-md-4">
-	<h2>Profile Mahasiswa</h2>
+	<div class="col-md-offset-4">
 	<br>
 	<img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
-	<input type="file" class="text-left left-block file-upload">
+</div>
+<div>
+	<br>
+	<input type="file" class="text-center center-block file-upload">
   	<br><br>
 </div>
 <br>
-<div class="col-md-4"></div>
-</div>
+
 
 <div class="row">
 	<div class="form-group">
@@ -133,11 +135,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="col-md-4"> 
 			<label class="radio-inline" for="Gender-0">
 			<input type="radio" name="Jenis Kelamin" id="Gender-0" value="1" checked="checked">
-			Male </label>
+			Laki-Laki </label>
 
 			<label class="radio-inline" for="Gender-1">
 			<input type="radio" name="Jenis Kelamin" id="Gender-1" value="2">
-			Female </label> 
+			Perempuan </label> 
 
 		</div>
 	</div>
@@ -185,18 +187,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="form-group">
 		<label class="col-md-4 control-label" ></label>  
 		<div class="col-md-4">
-			<a href="#" class="btn btn-success"><span class="glyphicon glyphicon-thumbs-up"></span> Submit</a>
-			<a href="#" class="btn btn-danger" value=""><span class="glyphicon glyphicon-remove-sign"></span> Clear</a>
+			<a href="#" class="btn btn-success"><span class="glyphicon glyphicon-thumbs-up"></span> Simpan</a>
 		</div>
 	</div>
 </div>
 
-	</fieldset>
 	</form>
-</div>
-
-<div class="col-md-2 hidden-xs">
-	<img src="http://websamplenow.com/30/userprofile/images/avatar.jpg" class="img-responsive img-thumbnail ">
 </div>
 
 <!-- jQuery Version 1.11.1 -->
