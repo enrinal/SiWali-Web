@@ -24,7 +24,8 @@ class Mahasiswa extends CI_Controller{
 	 }
 	 function uploadip()
 	 {
-			 $this->load->view('mahasiswa/uploadip');
-
+		 $this->load->view('mahasiswa/navbar_mhs');
+		 $this->load->view('mahasiswa/topbar_mhs');
+		 $this->load->view('mahasiswa/uploadip');
 	 }
 }
