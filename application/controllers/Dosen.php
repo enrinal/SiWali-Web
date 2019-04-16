@@ -30,7 +30,9 @@ function __construct() {
  }
 
  public function profil(){
+	 $this->load->view('dosen/navbar_dosen');
 	 $this->load->view('dosen/profil-dosen/profil_dosen');
+	 $this->load->view('dosen/topbar_dosen');
  }
 
  function mahasiswa_wali(){
