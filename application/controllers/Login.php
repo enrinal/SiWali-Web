@@ -9,8 +9,8 @@ class Login extends CI_Controller{
   }
 
   function masuk(){
-    $username = $this->input->post('username',TRUE);
-    $password = $this->input->post('password',TRUE);
+    $username = $_POST['username'];
+    $password = md5( $_POST['password'] );
     $validate = $this->model_login->cek($username,$password);
     if($validate->num_rows() > 0){
         $data  = $validate->row_array();
