@@ -28,14 +28,27 @@ class Mahasiswa extends CI_Controller{
 	 }
 	 function lihatip()
 	 {
+		 $data['query'] = $this->model_mahasiswa->get_ip($this->sess['username']);
 		 $this->load->view('mahasiswa/navbar_mhs');
 		 $this->load->view('mahasiswa/topbar_mhs');
-		 $this->load->view('mahasiswa/lihatip');
+		 $this->load->view('mahasiswa/lihatip',$data);
 	 }
 	 function uploadip()
 	 {
 		 $this->load->view('mahasiswa/navbar_mhs');
 		 $this->load->view('mahasiswa/topbar_mhs');
 		 $this->load->view('mahasiswa/uploadip');
+	 }
+
+	 function update_ip(){
+		 $semester = $this->input->post('semester');
+		 $ip = $this->input->post('ip');
+
+		 $data = array(
+			 'semester' => $semester,
+			 'ip' => $ip
+			 );
+		 $this->model_mahasiswa->update_ip($this->sess['username'],$data);
+		 redirect('mahasiswa/uploadip');
 	 }
 }

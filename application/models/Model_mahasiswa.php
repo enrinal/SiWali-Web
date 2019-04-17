@@ -37,4 +37,18 @@ class Model_mahasiswa extends CI_Model{
             );
         }
 	}
+
+	function get_ip($nim){
+		$sql = "SELECT `semester_1`,`semester_2`, `semester_3`, `semester_4`, `semester_5`, `semester_6`, `semester_7`, `semester_8` FROM `mahasiswa` WHERE nim_mahasiswa=".$nim." ";
+		return $this->db->query($sql)->row();
+	}
+
+	function update_ip($nim,$data){
+		$ip = (float) $data['ip'];
+		if($data['semester']=='semester_1'){
+			$sql = "UPDATE `mahasiswa` SET semester_1='".$ip."'
+                WHERE nim_mahasiswa=".$nim."";
+			$this->db->query($sql);
+		}
+	}
 }

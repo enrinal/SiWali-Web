@@ -34,18 +34,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <div class="text-center">
                 <h1 class="h4 text-gray-900 mb-4">Upload IP</h1>
               </div>
-              <form action="<?php echo base_url(). 'mahasiswa/tambah_ip'; ?>" method="post">
+              <form action="<?php echo base_url(). 'mahasiswa/update_ip'; ?>" method="post">
                 <div class="form-group">
-                    <select class="form-control form-control-lg" id="Semester" name="Semester" placeholder="option">
+                    <select class="form-control form-control-lg" id="Semester" name="semester" placeholder="option">
                       <option value="" disabled selected>Semester</option>
-                      <option>Semester 1</option>
-                      <option>Semester 2</option>
-                      <option>Semester 3</option>
-                      <option>Semester 4</option>
-                      <option>Semester 5</option>
-                      <option>Semester 6</option>
-                      <option>Semester 7</option>
-                      <option>Semester 8</option>
+                      <option value="semester_1">Semester 1</option>
+                      <option value="semester_2">Semester 2</option>
+                      <option value="semester_3">Semester 3</option>
+                      <option value="semester_4">Semester 4</option>
+                      <option value="semester_5">Semester 5</option>
+                      <option value="semester_6">Semester 6</option>
+                      <option value="semester_7">Semester 7</option>
+                      <option value="semester_8">Semester 8</option>
                     </select>
                     </div>
                 <div class="form-group">
