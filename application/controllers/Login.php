@@ -23,16 +23,16 @@ class Login extends CI_Controller{
             'level'     => $level,
             'logged_in' => TRUE
         );
-        $this->session->set_userdata($sesdata);
+        $this->session->set_userdata('logged_in', $sesdata);
         // login admin
         if($level === '1'){
-            redirect('admin');
+            redirect('admin',"refresh");
         // login dosen
         }elseif($level === '2'){
-            redirect('dosen');
+            redirect('dosen',"refresh");
         // login mahasiswa
         }elseif($level === '3'){
-            redirect('mahasiswa');
+            redirect('mahasiswa',"refresh");
         }
     }else{
         echo $this->session->set_flashdata('Username atau Password Salah');
@@ -40,6 +40,37 @@ class Login extends CI_Controller{
     }
   }
 
+//   public function masuk(){
+//   $username = $this->input->post("username");
+//   $password = $this->input->post("password");
+//   if(isset($username) and $username == '' and isset($password) and $password == ''){
+//     $info = url_title('username dan password yang anda masukan kosong');
+//           redirect($this->config->item('base_url').'login?info='.$info, 'refresh');
+//   }
+//   $this->load->model('model_login');
+//   $rst_auth = $this->model_login->cek($username,$password);
+//   if ($rst_auth->num_rows() > 0) {
+//       $sess_array = array(
+//             'id'  => $id,
+//             'username'  => $username,
+//             'level'     => $level,
+//             'login_status' => true
+//           );
+//           $this->session->set_userdata('logged_in', $sess_array);
+//           if($level === '1'){
+//               redirect('admin',"refresh");
+//           // login dosen
+//           }elseif($level === '2'){
+//               redirect('dosen',"refresh");
+//           // login mahasiswa
+//           }elseif($level === '3'){
+//               redirect('mahasiswa',"refresh");
+//           }
+//   } else {
+//     $info = url_title('username dan password yang anda masukan salah');
+//           redirect($this->config->item('base_url').'login/asp?info='.$info, 'refresh');
+//   }
+// }
   function logout(){
       $this->session->sess_destroy();
       redirect('login');

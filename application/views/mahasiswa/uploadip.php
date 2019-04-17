@@ -1,96 +1,87 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Upload IP</title>
 
-    <!-- Bootstrap -->    
-    <link href="<?php echo base_url('assets/css/bootstrap.min.css');?>" rel=”stylesheet”>
-    <!--<link rel="stylesheet" href="assets/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
-    <link href="<?php echo base_url('assets/css/style.css');?>" rel=”stylesheet”>
-    <!--<link rel="stylesheet" type="text/css" href="assets/css/style.css"> -->
+<head>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <section class="upload" id="upload">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 text-center" >
-            <h2><strong>UPLOAD IP</strong></h2>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>SiWali</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="<?php echo base_url('assets/vendor/fontawesome-free/css/all.css');?>" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="<?php echo base_url('assets/css/sb-admin-2.css');?>" rel="stylesheet">
+
+</head>
+<body class="bg-gradient-primary">
+
+  <div class="container">
+
+    <div class="card o-hidden border-0 shadow-lg my-5">
+      <div class="card-body p-0">
+        <!-- Nested Row within Card Body -->
+          <div class="col-xl-auto">
+            <div class="p-5">
+              <div class="text-center">
+                <h1 class="h4 text-gray-900 mb-4">Upload IP</h1>
+              </div>
+              <form action="<?php echo base_url(). 'mahasiswa/tambah_ip'; ?>" method="post">
+                <div class="form-group">
+                    <select class="form-control form-control-lg" id="Semester" name="Semester" placeholder="option">
+                      <option value="" disabled selected>Semester</option>
+                      <option>Semester 1</option>
+                      <option>Semester 2</option>
+                      <option>Semester 3</option>
+                      <option>Semester 4</option>
+                      <option>Semester 5</option>
+                      <option>Semester 6</option>
+                      <option>Semester 7</option>
+                      <option>Semester 8</option>
+                    </select>
+                    </div>
+                <div class="form-group">
+                  <input type="number" class="form-control form-control-lg" name="ip" placeholder="IP">
+                </div>
+                  <!-- </div> -->
+                  <input class="btn btn-primary btn-user btn-block" type="submit" value="Input">
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section class="form" id="form">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-             <form class = "col-sm-6 col-sm-offset-3">
-            <div class="form-group">
-              <label for="IP1">IP Semester 1</label>
-              <input type="IP1" class="form-control" id="IP1" placeholder="Masukkan IP Semester 1">
-            </div>
+  </div>
 
-            <div class="form-group">
-              <label for="IP1">IP Semester 2</label>
-              <input type="IP2" class="form-control" id="IP2" placeholder="Masukkan IP Semester 2">
-            </div>
 
-            <div class="form-group">
-              <label for="IP3">IP Semester 3</label>
-              <input type="IP3" class="form-control" id="IP3" placeholder="Masukkan IP Semester 3">
-            </div>
 
-            <div class="form-group">
-              <label for="IP4">IP Semester 4</label>
-              <input type="IP4" class="form-control" id="IP4" placeholder="Masukkan IP Semester 4">
-            </div>
+  <!-- Bootstrap core JavaScript-->
+  <script src="<?php echo base_url('assets/vendor/jquery/jquery.min.js');?>"></script>
+  <script src="<?php echo base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
 
-            <div class="form-group">
-              <label for="IP5">IP Semester 5</label>
-              <input type="IP5" class="form-control" id="IP5" placeholder="Masukkan IP Semester 5">
-            </div>
+  <!-- Core plugin JavaScript-->
+  <script src="<?php echo base_url('assets/vendor/jquery-easing/jquery.easing.min.js');?>"></script>
 
-            <div class="form-group">
-              <label for="IP6">IP Semester 6</label>
-              <input type="IP6" class="form-control" id="IP6" placeholder="Masukkan IP Semester 6">
-            </div>
+  <!-- Custom scripts for all pages-->
+  <script src="<?php echo base_url('assets/js/sb-admin-2.min.js');?>"></script>
 
-            <div class="form-group">
-              <label for="IP7">IP Semester 7</label>
-              <input type="IP7" class="form-control" id="IP7" placeholder="Masukkan IP Semester 7">
-            </div>
+  <!-- Page level plugins -->
+  <script src="<?php echo base_url('assets/vendor/datatables/jquery.dataTables.min.js');?>"></script>
 
-            <div class="form-group">
-              <label for="IP8">IP Semester 8</label>
-              <input type="IP8" class="form-control" id="IP8" placeholder="Masukkan IP Semester 8">
-            </div>
+  <!-- Page level custom scripts -->
+  <script src="<?php echo base_url('assets/vendor/datatables/dataTables.bootstrap4.min.js');?>"></script>
+  <script src="<?php echo base_url('assets/js/demo/datatables-demo.js');?>"></script>
 
-  
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="<?php echo base_url('assets/js/jquery-1.12.4.min.js');?>" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <link href="<?php echo base_url('assets/css/bootstrap.min.css');?>" rel=”stylesheet”>
-    <script src="<?php echo base_url('assets/js/bootstrap.min.js');?>" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-  </body>
+</body>
+
 </html>

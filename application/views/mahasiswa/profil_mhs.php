@@ -37,9 +37,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 <div class="left">
-	<h2>Profile Mahasiswa</h2> 
+	<h2>Profile Mahasiswa</h2>
 
-</div> 
+</div>
 <hr>
 	<div class="col-md-offset-4">
 	<br>
@@ -55,7 +55,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <div class="row">
 	<div class="form-group">
-		<label class="col-md-4 control-label" for="Nama">Nama</label>  
+		<label class="col-md-4 control-label" for="Nama">Nama</label>
 		<div class="col-md-4">
 			<div class="input-group">
 				<div class="input-group-addon">
@@ -67,7 +67,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>
 
 	<div class="form-group">
-	<label class="col-md-4 control-label" for="NIM)">NIM</label>  
+	<label class="col-md-4 control-label" for="NIM)">NIM</label>
 		<div class="col-md-4">
 			<div class="input-group">
 				<div class="input-group-addon">
@@ -79,7 +79,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>
 
 	<div class="form-group">
-		<label class="col-md-4 control-label" for="Angkatan">Angkatan</label>  
+		<label class="col-md-4 control-label" for="Angkatan">Angkatan</label>
 			<div class="col-md-4">
 				<div class="input-group">
 					<div class="input-group-addon">
@@ -91,7 +91,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>
 
 	<div class="form-group">
-		<label class="col-md-4 control-label" for="Dosen Wali">Dosen Wali</label>  
+		<label class="col-md-4 control-label" for="Dosen Wali">Dosen Wali</label>
 			<div class="col-md-4">
 				<div class="input-group">
 					<div class="input-group-addon">
@@ -104,7 +104,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>
 
 	<div class="form-group">
-		<label class="col-md-4 control-label" for="Tempat Lahir">Tempat Lahir</label>  
+		<label class="col-md-4 control-label" for="Tempat Lahir">Tempat Lahir</label>
 			<div class="col-md-4">
 				<div class="input-group">
 					<div class="input-group-addon">
@@ -118,7 +118,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <!-- Text input-->
 	<div class="form-group">
-		<label class="col-md-4 control-label" for="Tanggal Lahir">Tanggal Lahir</label>  
+		<label class="col-md-4 control-label" for="Tanggal Lahir">Tanggal Lahir</label>
 		<div class="col-md-4">
 			<div class="input-group">
 				<div class="input-group-addon">
@@ -132,21 +132,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- Multiple Radios (inline) -->
 	<div class="form-group">
 		<label class="col-md-4 control-label" for="Jenis Kelamin">Jenis Kelamin</label>
-		<div class="col-md-4"> 
+		<div class="col-md-4">
 			<label class="radio-inline" for="Gender-0">
 			<input type="radio" name="Jenis Kelamin" id="Gender-0" value="1" checked="checked">
 			Laki-Laki </label>
 
 			<label class="radio-inline" for="Gender-1">
 			<input type="radio" name="Jenis Kelamin" id="Gender-1" value="2">
-			Perempuan </label> 
+			Perempuan </label>
 
 		</div>
 	</div>
 
 <!-- Text input-->
 	<div class="form-group">
-		<label class="col-md-4 control-label" for="Wali">Nama Wali</label>  
+		<label class="col-md-4 control-label" for="Wali">Nama Wali</label>
 		<div class="col-md-4">
 			<div class="input-group">
 				<div class="input-group-addon">
@@ -159,7 +159,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <!-- Text input-->
 	<div class="form-group">
-		<label class="col-md-4 control-label" for="Nomor telepon">Nomor Telepon </label>  
+		<label class="col-md-4 control-label" for="Nomor telepon">Nomor Telepon </label>
 		<div class="col-md-4">
 			<div class="input-group">
 				<div class="input-group-addon">
@@ -167,13 +167,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</div>
 				<input id="Nomor telepon" name="Nomor telepon" type="text" placeholder="Nomor telepon" class="form-control input-md">
 			</div>
-			
+
 		</div>
 	</div>
 
 <!-- Text input-->
 	<div class="form-group">
-		<label class="col-md-4 control-label" for="Email">Email</label>  
+		<label class="col-md-4 control-label" for="Email">Email</label>
 		<div class="col-md-4">
 			<div class="input-group">
 				<div class="input-group-addon">
@@ -185,7 +185,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>
 
 	<div class="form-group">
-		<label class="col-md-4 control-label" ></label>  
+		<label class="col-md-4 control-label" ></label>
 		<div class="col-md-4">
 			<a href="#" class="btn btn-success"><span class="glyphicon glyphicon-thumbs-up"></span> Simpan</a>
 		</div>

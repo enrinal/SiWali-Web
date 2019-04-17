@@ -32,19 +32,47 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="col-xl-auto">
             <div class="p-5">
               <div class="text-center">
-                <h1 class="h4 text-gray-900 mb-4">Tambah Dosen!</h1>
+                <h1 class="h4 text-gray-900 mb-4">Upload IP</h1>
               </div>
-              <form action="<?php echo base_url(). 'admin/tambah_dosen'; ?>" method="post">
-                <div class="form-group">
-                  <input type="name" class="form-control form-control-lg" name="nama" placeholder="Name">
-                </div>
-                <div class="form-group">
-                  <input type="number" class="form-control form-control-lg" name="nip" placeholder="NIP DOSEN">
-                </div>
-                  
-                  <!-- </div> -->
-                  <input class="btn btn-primary btn-user btn-block" type="submit" value="Input">
-              </form>
+              <div class="form-group">
+                <label for="IP1">IP Semester 1</label>
+                <input type="IP1" class="form-control" id="IP1" placeholder="Masukkan IP Semester 1">
+              </div>
+
+              <div class="form-group">
+                <label for="IP1">IP Semester 2</label>
+                <input type="IP2" class="form-control" id="IP2" placeholder="Masukkan IP Semester 2">
+              </div>
+
+              <div class="form-group">
+                <label for="IP3">IP Semester 3</label>
+                <input type="IP3" class="form-control" id="IP3" placeholder="Masukkan IP Semester 3">
+              </div>
+
+              <div class="form-group">
+                <label for="IP4">IP Semester 4</label>
+                <input type="IP4" class="form-control" id="IP4" placeholder="Masukkan IP Semester 4">
+              </div>
+
+              <div class="form-group">
+                <label for="IP5">IP Semester 5</label>
+                <input type="IP5" class="form-control" id="IP5" placeholder="Masukkan IP Semester 5">
+              </div>
+
+              <div class="form-group">
+                <label for="IP6">IP Semester 6</label>
+                <input type="IP6" class="form-control" id="IP6" placeholder="Masukkan IP Semester 6">
+              </div>
+
+              <div class="form-group">
+                <label for="IP7">IP Semester 7</label>
+                <input type="IP7" class="form-control" id="IP7" placeholder="Masukkan IP Semester 7">
+              </div>
+
+              <div class="form-group">
+                <label for="IP8">IP Semester 8</label>
+                <input type="IP8" class="form-control" id="IP8" placeholder="Masukkan IP Semester 8">
+              </div>
             </div>
           </div>
         </div>

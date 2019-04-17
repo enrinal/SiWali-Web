@@ -19,6 +19,10 @@ class Dosen extends CI_Controller{
 
 function __construct() {
 	 parent::__construct();
+	 if (!$this->session->userdata('logged_in')) {
+            redirect($this->config->item('base_url'), 'refresh');
+        }
+        $this->sess = $this->session->userdata('logged_in');
 	 $this->load->model('model_mahasiswa');
 	 $this->load->model('model_dosen');
  }
@@ -31,8 +35,8 @@ function __construct() {
 
  public function profil(){
 	 $this->load->view('dosen/navbar_dosen');
-	 $this->load->view('dosen/profil-dosen/profil_dosen');
 	 $this->load->view('dosen/topbar_dosen');
+	 $this->load->view('dosen/profil-dosen/profil_dosen');
  }
 
  function mahasiswa_wali(){

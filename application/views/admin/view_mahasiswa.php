@@ -38,23 +38,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
             <div class="card-body">
               <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" >
+                <table class="table table-striped table-bordered" id="dataTable" width="100%" cellspacing="0" >
                   <thead>
                   <tr>
                     <th>NIM</th>
                     <th>NAMA</th>
                     <th>ANGKATAN</th>
                     <th>NIP DOSEN</th>
+                    <th>Aksi</th>
                   </tr>
                 </thead>
-                <tfoot>
-                <tr>
-                  <th>NIM</th>
-                  <th>NAMA</th>
-                  <th>ANGKATAN</th>
-                  <th>NIP DOSEN</th>
-                </tr>
-              </tfoot>
                 <tbody>
                   <?php foreach($query as $row){?>
                     <tr>
@@ -62,6 +55,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <td><?php echo $row->nama_mahasiswa; ?></td>
                         <td><?php echo $row->angkatan; ?></td>
                         <td><?php echo $row->nip_dosen; ?></td>
+                        <td>
+                        <button type="button" class="btn btn-primary btn-sm"> Detail</button>
+                        <button type="button" class="btn btn-primary btn-sm"> Delete</button>
+                    </td>
                     </tr>
                   <?php } ?>
                 </tbody>
@@ -87,7 +84,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <!-- End of Content Wrapper -->
 
-  
+
   <!-- End of Page Wrapper -->
 
   <!-- Scroll to Top Button-->

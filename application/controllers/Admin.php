@@ -21,8 +21,13 @@ class Admin extends CI_Controller {
 
  function __construct() {
     parent::__construct();
-    $this->load->model('model_mahasiswa');
-		$this->load->model('model_dosen');
+		if (!$this->session->userdata('logged_in')) {
+            redirect($this->config->item('base_url'), 'refresh');
+        }
+        $this->sess = $this->session->userdata('logged_in');
+				$this->load->model('model_mahasiswa');
+				$this->load->model('model_dosen');
+
   }
 	public function index()
 	{
@@ -73,5 +78,21 @@ class Admin extends CI_Controller {
 			);
 		$this->model_dosen->input_data($data,'dosen');
 		redirect('admin/input_dosen');
+	}
+
+	function tambah_mahasiswa(){
+		$nama = $this->input->post('nama');
+		$nim = $this->input->post('nim');
+		$angkatan = $this->input->post('angkatan');
+		$nip = $this->input->post('dosen_wali');
+
+		$data = array(
+			'nama_mahasiswa' => $nama,
+			'nim_mahasiswa' => $nim,
+			'angkatan' => $angkatan,
+			'nip_dosen' => $nip
+			);
+		$this->model_mahasiswa->save($data,'mahasiswa');
+		redirect('admin/input_mahasiswa');
 	}
 }

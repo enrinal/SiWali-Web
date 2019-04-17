@@ -48,10 +48,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <select class="form-control form-control-lg" id="exampleFormControlSelect1" name="dosen_wali" placeholder="option">
                       <option value="" disabled selected>Dosen Wali</option>
                       <?php foreach($query as $row):?>
-                            <option><?php echo $row->nama_dosen; ?></option>
-                      <?php endforeach;?>             
+                            <option value=<?php echo $row->nip_dosen;?>><?php echo $row->nama_dosen; ?></option>
+                      <?php endforeach;?>
                     </select>
-                    </div>
+                    </div>                
                   <!-- <div class="form-group">
                     <input type="text" class="form-control" id="exampleInputEmail" placeholder="Username" readonly>
                   </div>
