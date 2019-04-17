@@ -41,11 +41,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="form-group">
                   <input type="number" class="form-control form-control-lg" name="nip" placeholder="NIP DOSEN">
                 </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control form-control-lg" name="username" placeholder="Username" readonly>
-                  </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control form-control-lg" name="password" placeholder="Password" readonly>
+                  
                   <!-- </div> -->
                   <input class="btn btn-primary btn-user btn-block" type="submit" value="Input">
               </form>

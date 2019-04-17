@@ -12,8 +12,31 @@ class Model_dosen extends CI_Model{
     return $query->result();
 	}
 
-	
+
 	function input_data($data,$table){
+		$this->db->trans_begin();
 		$this->db->insert($table,$data);
+		$nip=substr($data['nip_dosen'],0,6);
+		$nama=substr(strtolower(str_replace(" ", "", $data['nama_dosen'])),0,5);
+		$data_user = array(
+			'username' => $data['nip_dosen'],
+			'password' =>  $nama.$nip,
+			'level' => 2
+		);
+		$this->db->insert('users',$data_user);
+		if ($this->db->trans_status() === FALSE)
+        {
+            $this->db->trans_rollback();
+            return array (
+                'errors' => true,
+                'message' => 'Data is failed insert'
+            );
+        } else {
+            $this->db->trans_commit();
+            return array (
+                'errors' => false,
+                'message' => 'Data Berhasil dimasukkan'
+            );
+    		}
 	}
 }

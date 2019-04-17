@@ -32,28 +32,47 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="col-xl-auto">
             <div class="p-5">
               <div class="text-center">
-                <h1 class="h4 text-gray-900 mb-4">Upload IP</h1>
+                <h1 class="h4 text-gray-900 mb-4">Indeks Prestasi</h1>
               </div>
-              <form action="<?php echo base_url(). 'mahasiswa/update_ip'; ?>" method="post">
-                <div class="form-group">
-                    <select class="form-control form-control-lg" id="Semester" name="semester" placeholder="option">
-                      <option value="" disabled selected>Semester</option>
-                      <option value="semester_1">Semester 1</option>
-                      <option value="semester_2">Semester 2</option>
-                      <option value="semester_3">Semester 3</option>
-                      <option value="semester_4">Semester 4</option>
-                      <option value="semester_5">Semester 5</option>
-                      <option value="semester_6">Semester 6</option>
-                      <option value="semester_7">Semester 7</option>
-                      <option value="semester_8">Semester 8</option>
-                    </select>
-                    </div>
-                <div class="form-group">
-                  <input type="number" class="form-control form-control-lg" name="ip" placeholder="IP">
-                </div>
-                  <!-- </div> -->
-                  <input class="btn btn-primary btn-user btn-block" type="submit" value="Input">
-              </form>
+              <div class="form-group">
+                <label for="IP1">IP Semester 1</label>
+                <input readonly type="IP1" class="form-control" id="IP1" placeholder=<?php echo $query->semester_1;?>>
+              </div>
+
+              <div class="form-group">
+                <label for="IP1">IP Semester 2</label>
+                <input readonly type="IP2" class="form-control" id="IP2" placeholder=<?php echo $query->semester_2;?>>
+              </div>
+
+              <div class="form-group">
+                <label for="IP3">IP Semester 3</label>
+                <input readonly type="IP3" class="form-control" id="IP3" placeholder=<?php echo $query->semester_3;?>>
+              </div>
+
+              <div class="form-group">
+                <label for="IP4">IP Semester 4</label>
+                <input readonly type="IP4" class="form-control" id="IP4" placeholder=<?php echo $query->semester_4;?>>
+              </div>
+
+              <div class="form-group">
+                <label for="IP5">IP Semester 5</label>
+                <input readonly type="IP5" class="form-control" id="IP5" placeholder=<?php echo $query->semester_5;?>>
+              </div>
+
+              <div class="form-group">
+                <label for="IP6">IP Semester 6</label>
+                <input readonly type="IP6" class="form-control" id="IP6" placeholder=<?php echo $query->semester_6;?>>
+              </div>
+
+              <div class="form-group">
+                <label for="IP7">IP Semester 7</label>
+                <input readonly type="IP7" class="form-control" id="IP7" placeholder=<?php echo $query->semester_7;?>>
+              </div>
+
+              <div class="form-group">
+                <label for="IP8">IP Semester 8</label>
+                <input readonly type="IP8" class="form-control" id="IP8" placeholder=<?php echo $query->semester_8;?>>
+              </div>
             </div>
           </div>
         </div>
