@@ -20,7 +20,7 @@ class Model_dosen extends CI_Model{
 		$nama=substr(strtolower(str_replace(" ", "", $data['nama_dosen'])),0,5);
 		$data_user = array(
 			'username' => $data['nip_dosen'],
-			'password' =>  $nama.$nip,
+			'password' =>  md5($nama.$nip),
 			'level' => 2
 		);
 		$this->db->insert('users',$data_user);

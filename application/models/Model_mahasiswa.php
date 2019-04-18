@@ -18,7 +18,7 @@ class Model_mahasiswa extends CI_Model{
 		$nama=substr(strtolower(str_replace(" ", "", $data['nama_mahasiswa'])),0,5);
 		$data_user = array(
 			'username' => $data['nim_mahasiswa'],
-			'password' =>  $nama.$nim,
+			'password' =>  md5($nama.$nim),
 			'level' => 3
 		);
 		$this->db->insert('users',$data_user);
