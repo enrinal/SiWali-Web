@@ -1,15 +1,25 @@
-html{
-	font-family: serif;
+
+/*a.list-group-item {
+    color: #fff;
+    background-color: #fff;
+    border-style: none;
 }
 
-.profil{
-	margin-top: 100px;
+a.list-group-item.active {
+    color: #333;
+    background-color: #f2dca5;
+    border-color: #edcf83;
+}
+*/
+
+/*.profil{
+	margin-top: 115px;
+	margin-left: 170px;
 }
 
 .fm {
 	background-color: #fff;
 	padding:30px;
-	margin-top: 50px;
 	margin-bottom: 100px; 
 	border-radius: 20px;
 }
@@ -19,8 +29,14 @@ html{
 }
 
 .avatar{
-	width: 150px;
-	height: 150px;
+	width: 100px;
+	height: 100px;
 	margin-bottom: 30px; 
 }
 
+.btn{
+	color: #ffb400;
+	border: 20%;
+}
+
+*/

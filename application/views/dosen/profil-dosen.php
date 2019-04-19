@@ -7,26 +7,30 @@
 	<title>Profil</title>
 
 	<!-- Bootstrap -->
-	<link href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css');?>" rel=”stylesheet”>
-	<link href="<?php echo base_url('assets/css/p-dosen.css');?>" rel=”stylesheet”>
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.min.css');?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/pf-dosen.css');?>">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="<?php echo base_url('assets/js/bootstrap.min.js')?>"></script>
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	  	
 
 </head>
 
 <body>
-	<div class="container">
+	<?php $this->load->view('dosen/topbar_dosen'); ?>
+	<?php $this->load->view('dosen/sidebar_dosen'); ?>
+	
+
+
+	<!-- <div class="container">
 		<div class="profil">
 			<h2>Profil Dosen</h2><hr>
 		</div>
 		<form>
 			<div class="row">
-				<div class="col-sm-8">
+				<div class="col-sm-10 col-sm-offset-2">
 					<div class="fm">
 						<div class="form-group">
 							<div class="col-sm-4">
@@ -63,7 +67,7 @@
 									<input type="text" class="form-control" placeholder="Tempat Lahir">
 								</div>
 							</div><br>
-							<label class="col-sm-2 col-sm-offset-1 text-left">Tanggal Lahir</label>
+							<label class="col-sm-2 col-sm-offset-5 text-left">Tanggal Lahir</label>
 							<label class="col-sm-1 text-right">:</label>
 							<div>
 								<div class="input-group">
@@ -109,6 +113,7 @@
 				</div>
 			</div>
 		</form>
-	</div>
+	</div> -->
+	
 </body>
 </html>

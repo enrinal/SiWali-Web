@@ -34,7 +34,7 @@ function __construct() {
  }
 
  public function profil(){
-	 // $this->load->view('dosen/navbar_dosen');
+ 	 // $this->load->view('dosen/sidebar_dosen');
 	 // $this->load->view('dosen/topbar_dosen');
 	 $this->load->view('dosen/profil-dosen');
  }

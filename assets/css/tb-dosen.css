@@ -1,0 +1,116 @@
+html{
+	font-size: 60%;
+	font-family: serif;
+	display: block;
+}
+
+body{
+	margin-left: 50px;
+	margin-right: 50px;
+	font-family: sans-serif;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-weight: 400;
+	font-size: 12px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.container-base{
+    background: #fff;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    border-bottom: solid thin #e8e8e8;
+    box-shadow: 0px -6px 22px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+.row{
+	margin-right: -15px;
+	margin-left: -15px;
+}
+
+.container-top{
+    margin-bottom: 0px;
+    background: #daa520;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.logo{
+	width: 70px;
+	margin-bottom: 10px;
+}
+
+nav.navbar {
+    position: relative;
+    min-height: 0px;
+    margin-bottom: 0px;
+    border: none;
+    background: none;
+    border: none;
+    margin-bottom: 0px;
+}
+
+.nav{
+	padding-right: 20px;
+}
+
+.nav>li>a:focus{
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.nav>li>a:hover{
+	color: black;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.nav .glyphicon{
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+
+@media (max-width: 768px){
+	.container{
+		max-width: 750px;
+		padding-right: 15px;
+    	padding-left: 15px;
+    	margin-right: auto;
+    	margin-left: auto;
+	}
+}
+
+/*@media (min-width: 780px){
+
+	.navbar{
+		border-radius: 4px;
+		position: relative;
+		z-index: 1000;
+		min-height: 50px;
+	}
+}*/
+
+/*html{
+	font-family: serif;
+}
+
+.navbar{
+	background: #e5a200;
+}
+
+.navbar-header{
+	margin-bottom: 25px;
+}
+
+.logo{
+	width: 33px;
+	height: 40px;
+}*/
