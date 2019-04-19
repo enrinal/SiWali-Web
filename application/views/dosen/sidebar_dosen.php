@@ -20,7 +20,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="row">
       <div class="col-md-12">
         <div class="list-group">
-          <a href="" class="list-group-item active">
+          <a href="" class="list-group-item">
             <i class="fa fa-home sps"></i>Beranda
           <a href="" class="list-group-item">
             <i class="fa fa-user-graduate sps"></i>Mahasiswa Perwalian
@@ -31,7 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <a href="" class="list-group-item">
             <i class="fa fa-file-upload sps"></i>Upload Laporan
           </a>
-          <a href="" class="list-group-item">
+          <a href="" class="list-group-item  active">
             <i class="fa fa-user sps"></i>Profil
           </a>
         </div>
