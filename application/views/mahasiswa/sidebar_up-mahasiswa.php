@@ -20,15 +20,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="row">
       <div class="col-md-12">
         <div class="list-group">
-          <a href="<?php echo base_url('dosen');?>" class="list-group-item">
+          <a href="<?php echo base_url('mahasiswa');?>" class="list-group-item">
             <i class="fa fa-home sps"></i>Beranda
           <a href="" class="list-group-item">
             <i class="fa fa-user-shield sps"></i>Konsultasi
           </a>
-          <a href="" class="list-group-item active">
+          <a href="<?php echo base_url('mahasiswa/uploadip');?>" class="list-group-item active">
             <i class="fa fa-file-upload sps"></i>Upload IP
           </a>
-          <a href="<?php echo base_url('dosen/profil');?>" class="list-group-item">
+          <a href="<?php echo base_url('mahasiswa/lihatip');?>" class="list-group-item">
+            <i class="fa fa-clipboard-list sps"></i>Lihat IP
+          </a>
+          <a href="<?php echo base_url('mahasiswa/profil');?>" class="list-group-item">
             <i class="fa fa-user sps"></i>Profil
           </a>
         </div>
