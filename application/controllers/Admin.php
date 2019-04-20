@@ -36,36 +36,36 @@ class Admin extends CI_Controller {
 	}
 
 	function input_mahasiswa(){
-		$this->load->view('admin/navbar_admin');
-		$this->load->view('admin/topbar_admin');
+		// $this->load->view('admin/sidebar_im-admin');
+		// $this->load->view('admin/topbar_admin');
 		$data['query'] = $this->model_dosen->get_dosen();
 		$this->load->view('admin/input_mahasiswa',$data);
 	}
 
 	function input_dosen(){
-		$this->load->view('admin/navbar_admin');
-		$this->load->view('admin/topbar_admin');
+		// $this->load->view('admin/sidebar_im-admin');
+		// $this->load->view('admin/topbar_admin');
 		$this->load->view('admin/input_dosen');
 
 	}
 
 	function view_mahasiswa(){
-		$this->load->view('admin/navbar_admin');
-		$this->load->view('admin/topbar_admin');
+		// $this->load->view('admin/sidebar_im-admin');
+		// $this->load->view('admin/topbar_admin');
 		$data['query'] = $this->model_mahasiswa->get_mahasiswa();
 		$this->load->view('admin/view_mahasiswa',$data);
 	}
 
 	function view_dosen(){
-		$this->load->view('admin/navbar_admin');
-		$this->load->view('admin/topbar_admin');
+		// $this->load->view('admin/sidebar_im-admin');
+		// $this->load->view('admin/topbar_admin');
 		$data['query'] = $this->model_dosen->get_dosen();
 		$this->load->view('admin/view_dosen',$data);
 	}
 
 	function assign_data(){
-		$this->load->view('admin/navbar_admin');
-		$this->load->view('admin/beranda_admin');
+		// $this->load->view('admin/sidebar_a-admin');
+		// $this->load->view('admin/beranda_admin');
 	}
 
 	function tambah_dosen(){

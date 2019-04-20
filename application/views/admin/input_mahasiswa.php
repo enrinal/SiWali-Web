@@ -12,23 +12,54 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SiWali</title>
+  <title>Input Data Mahasiswa</title>
 
   <!-- Custom fonts for this template-->
   <link href="<?php echo base_url('assets/vendor/fontawesome-free/css/all.css');?>" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="<?php echo base_url('assets/css/sb-admin-2.css');?>" rel="stylesheet">
+  <!-- <link href="<?php echo base_url('assets/css/sb-admin-2.css');?>" rel="stylesheet"> -->
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/im-admin.css');?>">
 
 </head>
-<body class="bg-gradient-primary">
+
+<body>
+  <?php $this->load->view('admin/topbar_admin'); ?>
+  <div class="container-content">
+    <?php $this->load->view('admin/sidebar_im-admin'); ?>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-1">
+        <h3>Tambah Mahasiswa</h3><br>
+        <form action="<?php echo base_url(). 'admin/tambah_mahasiswa'; ?>" method="post">
+          <div class="form-group">
+            <input type="name" class="form-control form-control-lg" name="nama" placeholder="Nama">
+          </div>
+          <div class="form-group">
+            <input type="number" class="form-control form-control-lg" name="nim" placeholder="NIM">
+          </div>
+          <div class="form-group">
+            <input type="number" class="form-control form-control-lg" name="angkatan" placeholder="Angkatan">
+          </div>
+          <div class="form-group">
+            <select class="form-control form-control-lg" id="exampleFormControlSelect1" name="dosen_wali" placeholder="option">
+              <option value="" disabled selected>Dosen Wali</option>
+              <?php foreach($query as $row):?>
+              <option value=<?php echo $row->nip_dosen;?>><?php echo $row->nama_dosen; ?></option>
+            <?php endforeach;?>
+          </select>
+        </div><br>
+        <input class="btn btn-ctm" type="submit" value="Input">
+      </form>
+    </div>
+  </div>
+</div>
+<!-- <body class="bg-gradient-primary">
 
   <div class="container">
 
     <div class="card o-hidden border-0 shadow-lg my-5">
       <div class="card-body p-0">
-        <!-- Nested Row within Card Body -->
           <div class="col-xl-auto">
             <div class="p-5">
               <div class="text-center">
@@ -52,12 +83,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                       <?php endforeach;?>
                     </select>
                     </div>                
-                  <!-- <div class="form-group">
-                    <input type="text" class="form-control" id="exampleInputEmail" placeholder="Username" readonly>
-                  </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" id="exampleInputPassword" placeholder="Password" readonly>
-                  </div> -->
+                  
                 <input class="btn btn-primary btn-user btn-block" type="submit" value="Input">
               </form>
             </div>
@@ -68,7 +94,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   </div>
 
-
+ -->
 
   <!-- Bootstrap core JavaScript-->
   <script src="<?php echo base_url('assets/vendor/jquery/jquery.min.js');?>"></script>

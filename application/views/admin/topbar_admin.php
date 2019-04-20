@@ -19,28 +19,51 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="<?php echo base_url('assets/css/sb-admin-2.css');?>" rel="stylesheet">
+  <link href="<?php echo base_url('assets/css/topbar.css');?>" rel="stylesheet">
 
 </head>
-<body id="page-top">
+<body>
+  <div class="container-base">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1">
+          <img src="<?php echo base_url('assets/css/image/itera.png')?>" class="logo">
+        </div>
+        <div class="col-md-4">
+          <h3>Sistem Informasi Perwalian Teknik Geofisika</h3>
+          <p>"Institut Teknologi Sumatera"</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-top">
+    <nav class="navbar">
+      <ul class="nav navbar-nav navbar-right">
+        <!-- glyphicon glyphicon-user -->
+        <li><a href=""><span class="glyphicon glyphicon-user"></span>Admin</a></li>
+        <li><a href="">Keluar<span class="glyphicon glyphicon-log-out"></span></a></li>
+      </ul>
+    </nav>
+  </div>
 
-  <!-- Page Wrapper -->
 
-    <!-- Content Wrapper -->
+
+<!-- <body id="page-top">
+
     <div id="content-wrapper" class="d-flex flex-column">
 
-      <!-- Main Content -->
+ 
       <div id="content">
 
-        <!-- Topbar -->
+ 
         <nav class="navbar navbar-expand navbar-light bg-white topbar static-top shadow">
 
-          <!-- Sidebar Toggle (Topbar) -->
+ 
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
             <i class="fa fa-bars"></i>
           </button>
 
-          <!-- Topbar Search -->
+ 
           <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
             <div class="input-group">
               <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
@@ -52,15 +75,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
           </form>
 
-          <!-- Topbar Navbar -->
+ 
           <ul class="navbar-nav ml-auto">
 
-            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+ 
             <li class="nav-item dropdown no-arrow d-sm-none">
               <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-search fa-fw"></i>
               </a>
-              <!-- Dropdown - Messages -->
+ 
               <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
                 <form class="form-inline mr-auto w-100 navbar-search">
                   <div class="input-group">
@@ -75,14 +98,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
             </li>
 
-            <!-- Nav Item - Alerts -->
+ 
             <li class="nav-item dropdown no-arrow mx-1">
               <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-bell fa-fw"></i>
-                <!-- Counter - Alerts -->
+ 
                 <span class="badge badge-danger badge-counter">3+</span>
               </a>
-              <!-- Dropdown - Alerts -->
+ 
               <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
                 <h6 class="dropdown-header">
                   Alerts Center
@@ -124,14 +147,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
             </li>
 
-            <!-- Nav Item - Messages -->
+ 
             <li class="nav-item dropdown no-arrow mx-1">
               <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-envelope fa-fw"></i>
-                <!-- Counter - Messages -->
+ 
                 <span class="badge badge-danger badge-counter">7</span>
               </a>
-              <!-- Dropdown - Messages -->
+ 
               <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
                 <h6 class="dropdown-header">
                   Message Center
@@ -182,13 +205,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <div class="topbar-divider d-none d-sm-block"></div>
 
-            <!-- Nav Item - User Information -->
+ 
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
                 <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
               </a>
-              <!-- Dropdown - User Information -->
+ 
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="#">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -213,22 +236,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </ul>
 
         </nav>
-        <!-- End of Topbar -->
+
         <script src="<?php echo base_url('assets/vendor/jquery/jquery.min.js');?>"></script>
         <script src="<?php echo base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
 
-        <!-- Core plugin JavaScript-->
+
         <script src="<?php echo base_url('assets/vendor/jquery-easing/jquery.easing.min.js');?>"></script>
 
-        <!-- Custom scripts for all pages-->
+
         <script src="<?php echo base_url('assets/js/sb-admin-2.min.js');?>"></script>
 
-        <!-- Page level plugins -->
+
         <script src="<?php echo base_url('assets/vendor/chart.js/Chart.min.js');?>"></script>
 
-        <!-- Page level custom scripts -->
+
         <script src="<?php echo base_url('assets/js/demo/chart-area-demo.js');?>"></script>
         <script src="<?php echo base_url('assets/js/demo/chart-pie-demo.js');?>"></script>
       </body>
-
+ -->
       </html>

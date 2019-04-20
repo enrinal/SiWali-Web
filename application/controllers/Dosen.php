@@ -40,8 +40,8 @@ function __construct() {
  }
 
  function mahasiswa_wali(){
-	 $this->load->view('dosen/navbar_dosen');
-	 $this->load->view('dosen/topbar_dosen');
+	 // $this->load->view('dosen/navbar_dosen');
+	 // $this->load->view('dosen/topbar_dosen');
 	 $data['query'] = $this->model_mahasiswa->get_mahasiswa();
 	 $this->load->view('dosen/view_mahasiswa',$data);
  }
