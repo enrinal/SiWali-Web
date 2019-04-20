@@ -23,8 +23,8 @@
 	<div class="col-md-12 container-content">
 	<?php $this->load->view('dosen/sidebar_dosen'); ?>
     <div class="row">
-      <div class="col-md-offset-3">
-      	<h3>Profil Dosen</h3><hr>
+      <div class="col-md-offset-4">
+      	<h3>Profil Dosen</h3>
       	<form>
       		<div class="col-sm-11 form-group">
       			<div class="col-sm-4">
