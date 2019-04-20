@@ -31,8 +31,7 @@ class Admin extends CI_Controller {
   }
 	public function index()
 	{
-			$this->load->view('admin/navbar_admin');
-			$this->load->view('admin/beranda_admin');
+		$this->load->view('admin/beranda_admin');
 	}
 
 	function input_mahasiswa(){

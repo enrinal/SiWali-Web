@@ -19,70 +19,60 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="<?php echo base_url('assets/css/sb-admin-2.css');?>" rel="stylesheet">
+<!--  <link href="--><?php //echo base_url('assets/css/sb-admin-2.css');?><!--" rel="stylesheet">-->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/id-admin.css');?>">
+
 
 </head>
-<body class="bg-gradient-primary">
-
-  <div class="container">
-
-    <div class="card o-hidden border-0 shadow-lg my-5">
-      <div class="card-body p-0">
-        <!-- Nested Row within Card Body -->
-          <div class="col-xl-auto">
-            <div class="p-5">
-              <div class="text-center">
-                <h1 class="h4 text-gray-900 mb-4">Indeks Prestasi</h1>
-              </div>
-              <div class="form-group">
+<body>
+<?php $this->load->view('mahasiswa/topbar_mahasiswa'); ?>
+<div class="container-content">
+    <?php $this->load->view('mahasiswa/sidebar_up-mahasiswa'); ?>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-1">
+            <h3>Upload IP</h3><br>
+            <div class="form-group">
                 <label for="IP1">IP Semester 1</label>
                 <input readonly type="IP1" class="form-control" id="IP1" placeholder=<?php echo $query->semester_1;?>>
-              </div>
+            </div>
 
-              <div class="form-group">
+            <div class="form-group">
                 <label for="IP1">IP Semester 2</label>
                 <input readonly type="IP2" class="form-control" id="IP2" placeholder=<?php echo $query->semester_2;?>>
-              </div>
+            </div>
 
-              <div class="form-group">
+            <div class="form-group">
                 <label for="IP3">IP Semester 3</label>
                 <input readonly type="IP3" class="form-control" id="IP3" placeholder=<?php echo $query->semester_3;?>>
-              </div>
+            </div>
 
-              <div class="form-group">
+            <div class="form-group">
                 <label for="IP4">IP Semester 4</label>
                 <input readonly type="IP4" class="form-control" id="IP4" placeholder=<?php echo $query->semester_4;?>>
-              </div>
+            </div>
 
-              <div class="form-group">
+            <div class="form-group">
                 <label for="IP5">IP Semester 5</label>
                 <input readonly type="IP5" class="form-control" id="IP5" placeholder=<?php echo $query->semester_5;?>>
-              </div>
+            </div>
 
-              <div class="form-group">
+            <div class="form-group">
                 <label for="IP6">IP Semester 6</label>
                 <input readonly type="IP6" class="form-control" id="IP6" placeholder=<?php echo $query->semester_6;?>>
-              </div>
+            </div>
 
-              <div class="form-group">
+            <div class="form-group">
                 <label for="IP7">IP Semester 7</label>
                 <input readonly type="IP7" class="form-control" id="IP7" placeholder=<?php echo $query->semester_7;?>>
-              </div>
+            </div>
 
-              <div class="form-group">
+            <div class="form-group">
                 <label for="IP8">IP Semester 8</label>
                 <input readonly type="IP8" class="form-control" id="IP8" placeholder=<?php echo $query->semester_8;?>>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-
-  </div>
-
-
-
+</div>
   <!-- Bootstrap core JavaScript-->
   <script src="<?php echo base_url('assets/vendor/jquery/jquery.min.js');?>"></script>
   <script src="<?php echo base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')?>"></script>

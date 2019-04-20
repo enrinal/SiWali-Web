@@ -29,8 +29,7 @@ function __construct() {
 
  public function index()
  {
-		 $this->load->view('dosen/navbar_dosen');
-		 $this->load->view('dosen/beranda_dosen');
+     $this->load->view('dosen/beranda_dosen');
  }
 
  public function profil(){

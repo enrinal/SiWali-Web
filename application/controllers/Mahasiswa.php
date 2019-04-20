@@ -9,15 +9,14 @@ class Mahasiswa extends CI_Controller{
 		 if (!$this->session->userdata('logged_in')) {
             redirect($this->config->item('base_url'), 'refresh');
         }
-        $this->sess = $this->session->userdata('logged_in');
+         $this->sess = $this->session->userdata('logged_in');
 		 $this->load->model('model_mahasiswa');
 		 $this->load->model('model_dosen');
 	 }
 
 	 public function index()
 	 {
-			 $this->load->view('mahasiswa/navbar_mhs');
-			 $this->load->view('mahasiswa/beranda_mhs');
+	     $this->load->view('mahasiswa/beranda_mhs');
 	 }
 
 	 function profil()
@@ -29,8 +28,8 @@ class Mahasiswa extends CI_Controller{
 	 function lihatip()
 	 {
 		 $data['query'] = $this->model_mahasiswa->get_ip($this->sess['username']);
-		 $this->load->view('mahasiswa/navbar_mhs');
-		 $this->load->view('mahasiswa/topbar_mhs');
+		// $this->load->view('mahasiswa/navbar_mhs');
+         //$this->load->view('mahasiswa/topbar_mhs');
 		 $this->load->view('mahasiswa/lihatip',$data);
 	 }
 	 function uploadip()
