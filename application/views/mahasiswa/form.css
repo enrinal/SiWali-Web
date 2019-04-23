@@ -1,0 +1,40 @@
+head 
+{
+	background: pink;
+}
+#kiri
+{
+width:50%;
+height:100px;
+background-color:#FF0;
+float:left;
+}
+#kanan
+{
+width:50%;
+height:100px;
+background-color:#0C0;
+float:right;
+}
+</style>
+
+}
+form {
+    overflow: hidden;
+}
+ 
+label {
+    float: left;
+    width: 200px;
+    padding-right: 24px;
+}
+ 
+input {
+    float: left;
+    width: calc(100% - 200px);
+}
+ 
+button {
+    float: right;
+    width: calc(100% - 200px);
+}

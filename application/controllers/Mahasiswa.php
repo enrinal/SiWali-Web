@@ -21,8 +21,8 @@ class Mahasiswa extends CI_Controller{
 
 	 function profil()
 	 {
-		 $this->load->view('mahasiswa/navbar_mhs');
-		 $this->load->view('mahasiswa/topbar_mhs');
+		// $this->load->view('mahasiswa/navbar_mhs');
+		// $this->load->view('mahasiswa/topbar_mhs');
 		 $this->load->view('mahasiswa/profil_mhs');
 	 }
 	 function lihatip()

@@ -21,6 +21,7 @@
   	<div class="row">
   		<div class="col-md-offset-4">
   			<h3>Profil Dosen</h3>
+  			<hr>
   			<form>
   				<div class="col-sm-11 form-group">
   					<div class="col-sm-4">
