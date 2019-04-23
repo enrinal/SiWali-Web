@@ -36,9 +36,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	#kiri
 	{
-	width:20%;
+	width:30%;
 	height:100%;
 	float:left;
+	padding-left: 70px;
 	}
 
 	#kanan
@@ -47,10 +48,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	height:100%;
 	float:right;
 	}
-	.avatar
+	#left
 	{
-		width: 80%
+		padding-left: 70px;
 	}
+	
 	
 </style>
 </head>
@@ -64,10 +66,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="col-md-8">
 				<div class="form-horizontal">
 
+					<div id="left">
 					<div class="left">
 						<h3>Profile Mahasiswa</h3>
 						<hr>
-						
+						</div>
+
 					</div>
 
 					<div id="kiri">
