@@ -22,7 +22,7 @@ function __construct() {
 	 if (!$this->session->userdata('logged_in')) {
             redirect($this->config->item('base_url'), 'refresh');
         }
-        $this->sess = $this->session->userdata('logged_in');
+	$this->sess = $this->session->userdata('logged_in');
 	 $this->load->model('model_mahasiswa');
 	 $this->load->model('model_dosen');
  }
@@ -43,5 +43,8 @@ function __construct() {
 	 // $this->load->view('dosen/topbar_dosen');
 	 $data['query'] = $this->model_mahasiswa->get_mahasiswa();
 	 $this->load->view('dosen/view_mahasiswa',$data);
+ }
+ function upload_laporan() {
+ 	$this->load->view('dosen/upload_laporan');
  }
 }
