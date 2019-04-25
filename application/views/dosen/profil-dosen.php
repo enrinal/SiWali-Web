@@ -35,7 +35,7 @@
   							<div class="input-group-addon">
   								<span class="glyphicon glyphicon-user"></span>
   							</div>
-  							<input type="text" class="form-control" placeholder="Nama" disabled>
+  							<input type="text" class="form-control" readonly placeholder="Nama Dosen" value="<?php echo $query->nama_dosen;?>">
   						</div>
   					</div><br>
   					<label class="col-sm-2 text-left">NIP/NRK</label>
@@ -45,45 +45,17 @@
   							<div class="input-group-addon">
   								<span class="glyphicon glyphicon-credit-card"></span>
   							</div>
-  							<input type="text" class="form-control" placeholder="NIP/NRK" disabled>
+  							<input type="text" class="form-control" readonly placeholder=<?php echo $query->nip_dosen;?>>
   						</div>
   					</div><br>
-  					<label class="col-sm-2 text-left">Tempat Lahir</label>
-  					<label class="col-sm-1 text-right">:</label>
-  					<div>
-  						<div class="input-group">
-  							<div class="input-group-addon">
-  								<span class="glyphicon glyphicon-globe"></span>
-  							</div>
-  							<input type="text" class="form-control" placeholder="Tempat Lahir">
-  						</div>
-  					</div><br>
-  					<label class="col-sm-2 col-sm-offset-4 text-left">Tanggal Lahir</label>
-  					<label class="col-sm-1 text-right">:</label>
-  					<div>
-  						<div class="input-group">
-  							<div class="input-group-addon">
-  								<i class="fa fa-birthday-cake"></i>
-  							</div>
-  							<input type="text" class="form-control" placeholder="Tanggal Lahir">
-  						</div>
-  					</div><br>
-  					<label class="col-sm-2 col-sm-offset-4 text-left" for="jk">Jenis Kelamin</label>
-  					<label class="col-sm-1 text-right">:</label>
-  					<div>
-  						<label class="radio-inline" for="jk-0">
-  							<input type="radio" name="jk" value="1">Laki-Laki</label>
-  							<label class="radio-inline" for="jk-1">
-  								<input type="radio" name="jk" value="2">Perempuan</label>
-  							</div><br>
-  							<label class="col-sm-2 col-sm-offset-4 text-left">Email</label>
+  							<label class="col-sm-2 text-left">Email</label>
 							<label class="col-sm-1 text-right">:</label>
 							<div>
 								<div class="input-group">
 									<div class="input-group-addon">
 										<span class="glyphicon glyphicon-envelope"></span>
 									</div>
-									<input type="text" class="form-control" placeholder="Email">
+									<input type="text" class="form-control" placeholder=<?php echo $query->email;?>>
 								</div>
 							</div><br>
 					<label class="col-sm-2 col-sm-offset-4 text-left">No. Telepon</label>
@@ -93,14 +65,14 @@
 							<div class="input-group-addon">
 								<span class="glyphicon glyphicon-earphone"></span>
 							</div>
-							<input type="text" class="form-control" placeholder="Nomor Telepon">
+							<input type="text" class="form-control" placeholder=<?php echo $query->no_telp_dosen;?>>
 						</div>
 					</div><br><br>
 					<div class="col-sm-offset-11">
 						<button class="btn btn-ctm">Simpan</button>
 					</div>
-								
-							<!-- 
+
+							<!--
 							<div class="col-sm-offset-11">
 								<a href="#" class="btn btn-default"><span class="glyphicon glyphicon-floppy-disk"> Simpan</span></a>
 							</div> -->
@@ -201,6 +173,6 @@
 			</div>
 		</form>
 	</div> -->
-	
+
 </body>
 </html>

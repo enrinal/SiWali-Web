@@ -20,7 +20,7 @@ class Dosen extends CI_Controller{
 function __construct() {
 	 parent::__construct();
 	 if (!$this->session->userdata('logged_in')) {
-            redirect($this->config->item('base_url'), 'refresh');
+            redirect($this->config->item('base_purl'), 'refresh');
         }
 	$this->sess = $this->session->userdata('logged_in');
 	 $this->load->model('model_mahasiswa');
@@ -35,13 +35,14 @@ function __construct() {
  public function profil(){
  	 // $this->load->view('dosen/topbar_dosen');
  	 // $this->load->view('dosen/sidebar_dosen');
-	 $this->load->view('dosen/profil-dosen');
+	 $data['query'] = $this->model_dosen->get_dosenprofil($this->sess['username']);
+	 $this->load->view('dosen/profil-dosen',$data);
  }
 
  function mahasiswa_wali(){
 	 // $this->load->view('dosen/navbar_dosen');
 	 // $this->load->view('dosen/topbar_dosen');
-	 $data['query'] = $this->model_mahasiswa->get_mahasiswa();
+	 $data['query'] = $this->model_mahasiswa->get_mahasiswawali($this->sess['username']);
 	 $this->load->view('dosen/view_mahasiswa',$data);
  }
  function upload_laporan() {

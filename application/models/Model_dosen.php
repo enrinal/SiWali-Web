@@ -7,6 +7,11 @@ class Model_dosen extends CI_Model{
     return $query->result();
 	}
 
+	function get_dosenprofil($dosen){
+		$sql = "SELECT * from dosen WHERE nip_dosen = ".$dosen."";
+		return $this->db->query($sql)->row();
+	}
+
 	function get_namadosen(){
 		$query = $this->db->query("select nama_dosen from dosen");
     return $query->result();
@@ -39,4 +44,5 @@ class Model_dosen extends CI_Model{
             );
     		}
 	}
+
 }

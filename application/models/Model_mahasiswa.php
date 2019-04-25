@@ -7,6 +7,13 @@ class Model_mahasiswa extends CI_Model{
     return $query->result();
 	}
 
+	function get_mahasiswawali($dosen){
+		$sql = "SELECT `nim_mahasiswa`, `nama_mahasiswa`, `angkatan`, `semester_1`,
+		 `semester_2`,`semester_3`,`semester_4`,`semester_5`,`semester_6`,`semester_7`,
+		 `semester_8` FROM `mahasiswa` WHERE nip_dosen=".$dosen." ";
+		return $this->db->query($sql)->result();
+	}
+
 	function input_data($data,$table){
 		$this->db->insert($table,$data);
 	}
