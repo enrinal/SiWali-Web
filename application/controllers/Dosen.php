@@ -48,4 +48,9 @@ function __construct() {
  function upload_laporan() {
  	$this->load->view('dosen/upload_laporan');
  }
+
+ function konsultasi() {
+ 	$this->load->view('dosen/konsultasi_dosen');
+ }
+
 }

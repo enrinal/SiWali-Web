@@ -28,10 +28,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <a href="<?php echo base_url('mahasiswa/uploadip');?>" class="list-group-item">
             <i class="fa fa-file-upload sps"></i>Upload IP
           </a>
-          <a href="<?php echo base_url('mahasiswa/lihatip');?>" class="list-group-item">
+          <a href="<?php echo base_url('mahasiswa/lihatip');?>" class="list-group-item active">
             <i class="fa fa-clipboard-list sps"></i>Lihat IP
           </a>
-          <a href="<?php echo base_url('mahasiswa/profil');?>" class="list-group-item active">
+          <a href="<?php echo base_url('mahasiswa/profil');?>" class="list-group-item">
             <i class="fa fa-user sps"></i>Profil
           </a>
         </div>

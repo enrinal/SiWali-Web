@@ -30,7 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <?php $this->load->view('dosen/sidebar_m-dosen'); ?>
     <div class="row">
       <div class="col-md-7 col-md-offset-1">
-        <h3>Data Mahasiswa Perwalian</h3><br>
+        <h3>Data Mahasiswa Perwalian</h3><hr><br>
           <!-- <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the <a target="_blank" href="https://datatables.net">official DataTables documentation</a>.</p> -->
 
         <!--
@@ -92,9 +92,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
       </footer> -->
 
-  <a class="scroll-to-top rounded" href="#page-top">
+<!--   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
-  </a>
+  </a> -->
 
 
   <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

@@ -50,4 +50,9 @@ class Mahasiswa extends CI_Controller{
 		 $this->model_mahasiswa->update_ip($this->sess['username'],$data);
 		 redirect('mahasiswa/uploadip');
 	 }
+
+	 function konsultasi() {
+ 		 $this->load->view('mahasiswa/konsultasi_mhs');
+ 	 }
+
 }

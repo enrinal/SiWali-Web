@@ -20,8 +20,9 @@
   	<?php $this->load->view('dosen/sidebar_p-dosen'); ?>
   	<div class="row">
   		<div class="col-md-offset-4">
-  			<h3>Profil Dosen</h3>
-  			<hr>
+  			<div class="col-md-11">
+  				<h3>Profil Dosen</h3><hr>
+  			</div>
   			<form>
   				<div class="col-sm-11 form-group">
   					<div class="col-sm-4">
@@ -35,7 +36,7 @@
   							<div class="input-group-addon">
   								<span class="glyphicon glyphicon-user"></span>
   							</div>
-  							<input type="text" class="form-control" readonly placeholder="Nama Dosen" value="<?php echo $query->nama_dosen;?>">
+  							<input type="text" class="form-control" readonly placeholder="Nama Dosen" value="<?php echo $query->nama_dosen; ?>">
   						</div>
   					</div><br>
   					<label class="col-sm-2 text-left">NIP/NRK</label>
@@ -45,7 +46,7 @@
   							<div class="input-group-addon">
   								<span class="glyphicon glyphicon-credit-card"></span>
   							</div>
-  							<input type="text" class="form-control" readonly placeholder=<?php echo $query->nip_dosen;?>>
+  							<input type="text" class="form-control" readonly placeholder="<?php echo $query->nip_dosen;?>">
   						</div>
   					</div><br>
   							<label class="col-sm-2 text-left">Email</label>
