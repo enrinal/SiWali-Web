@@ -54,5 +54,9 @@ class Mahasiswa extends CI_Controller{
 	 function konsultasi() {
  		 $this->load->view('mahasiswa/konsultasi_mhs');
  	 }
+ 	 
+ 	 function tiket(){
+ 	 	$this->load->view('mahasiswa/create_ticket');
+ 	 }
 
 }

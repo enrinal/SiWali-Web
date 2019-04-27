@@ -17,12 +17,13 @@
 <body>
   <?php $this->load->view('mahasiswa/topbar_mahasiswa'); ?>
   <div class="container-content">
-  	<?php $this->load->view('mahasiswa/sidebar_k-mhs'); ?>
-  	<div class="row">
-  		<div class="col-md-offset-4">
+    <?php $this->load->view('mahasiswa/sidebar_k-mhs'); ?>
+    <div class="row">
+      <div class="col-md-offset-4">
         <button class="btn btn-default">Open Ticket</button>
         <button class="btn btn-default">Close Ticket</button>
-        <button class="btn btn-primary create">Create New Ticket</button>
+        <a href="<?php echo base_url('mahasiswa/tiket')?>">
+        <button class="btn btn-primary create">Create New Ticket</button></a>
         <div class="panel panel-default">
           <div class="no_ticket">
             <img src="<?php echo base_url('assets/css/image/ticket.png')?>"><br>
