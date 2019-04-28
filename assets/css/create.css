@@ -1,0 +1,17 @@
+.container-content{
+    background: #fff;
+    box-shadow: 4px 4px 22px 0px rgba(0, 0, 0, 0.2);
+    padding-top: 20px;
+    margin-right: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    }
+
+    input.form-control {
+    width: 300px;
+    font-size: 12px;
+    font: sans-serif;
+    }

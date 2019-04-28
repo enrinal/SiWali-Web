@@ -91,3 +91,8 @@ function __construct() {
 		redirect('dosen/profil');
 	 }
  }
+ function konsultasi() {
+ 	$this->load->view('dosen/konsultasi_dosen');
+ }
+
+}

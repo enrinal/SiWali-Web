@@ -77,4 +77,12 @@ class Mahasiswa extends CI_Controller{
 	  	  $result = $this->model_mahasiswa->get_profile_update($this->sess['username'], $data);
 	  		redirect('mahasiswa/profil');
 	  	 }
+	 function konsultasi() {
+ 		 $this->load->view('mahasiswa/konsultasi_mhs');
+ 	 }
+
+ 	 function tiket(){
+ 	 	$this->load->view('mahasiswa/create_ticket');
+ 	 }
+
 }

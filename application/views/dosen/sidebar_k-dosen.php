@@ -20,27 +20,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="row">
       <div class="col-md-12">
         <div class="list-group">
-          <a href="<?php echo base_url('mahasiswa');?>" class="list-group-item">
+          <a href="<?php echo base_url('dosen');?>" class="list-group-item">
             <i class="fa fa-home sps"></i>Beranda
-          <a href="<?php echo base_url('mahasiswa/konsultasi');?>" class="list-group-item">
+          </a>
+          <a href="<?php echo base_url('dosen/mahasiswa_wali');?>" class="list-group-item">
+            <i class="fa fa-user-graduate sps"></i>Mahasiswa Perwalian
+          </a>
+          <a href="" class="list-group-item active">
             <i class="fa fa-user-shield sps"></i>Konsultasi
           </a>
-          <a href="<?php echo base_url('mahasiswa/uploadip');?>" class="list-group-item">
-            <i class="fa fa-file-upload sps"></i>Upload IP
+          <a href="<?php echo base_url('dosen/upload_laporan');?>" class="list-group-item">
+            <i class="fa fa-file-upload sps"></i>Upload Laporan
           </a>
-          <a href="<?php echo base_url('mahasiswa/lihatip');?>" class="list-group-item">
-            <i class="fa fa-clipboard-list sps"></i>Lihat IP
-          </a>
-          <a href="<?php echo base_url('mahasiswa/profil');?>" class="list-group-item active">
+          <a href="<?php echo base_url('dosen/profil');?>" class="list-group-item">
             <i class="fa fa-user sps"></i>Profil
           </a>
         </div>
       </div>
     </div>
-    </div>
+  </div>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="<?php echo base_url('assets/js/bootstrap.min.js')?>"></script>
 </body>
 </html>
+
+
