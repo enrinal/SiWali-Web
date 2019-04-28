@@ -104,4 +104,15 @@ class Model_mahasiswa extends CI_Model{
 				$this->db->where('nim_mahasiswa', $id);
 				$data = $this->db->update('mahasiswa', $data);
 		}
+
+		function delete($id){
+			$this->db->delete('mahasiswa', array('nim_mahasiswa' => $id));
+			$this->db->delete('users', array('username' => $id));
+	    }
+
+			function change_password($id,$data){
+				$this->db->set('password',$data);
+				$this->db->where('username',$id);
+				$this->db->update('users');
+			}
 }

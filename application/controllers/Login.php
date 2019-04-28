@@ -23,7 +23,7 @@ class Login extends CI_Controller{
             'level'     => $level,
             'logged_in' => TRUE
         );
-        $this->session->set_userdata('logged_in', $sesdata);
+        $this->session->set_userdata($sesdata);
         // login admin
         if($level === '1'){
             redirect('admin',"refresh");

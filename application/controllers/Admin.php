@@ -24,7 +24,7 @@ class Admin extends CI_Controller {
 		if (!$this->session->userdata('logged_in')) {
             redirect($this->config->item('base_url'), 'refresh');
         }
-		if ( $this->session->userdata(('level') != '1')){
+		if ( $this->session->userdata('level') != '1'){
             redirect($this->config->item('base_url'), 'refresh');
       }
         $this->sess = $this->session->userdata('logged_in');
@@ -51,6 +51,13 @@ class Admin extends CI_Controller {
 
 	}
 
+	function ganti_password(){
+		// $this->load->view('admin/sidebar_im-admin');
+		// $this->load->view('admin/topbar_admin');
+		$this->load->view('admin/change_password');
+
+	}
+
 	function view_mahasiswa(){
 		// $this->load->view('admin/sidebar_im-admin');
 		// $this->load->view('admin/topbar_admin');
@@ -65,10 +72,7 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/view_dosen',$data);
 	}
 
-	function assign_data(){
-		// $this->load->view('admin/sidebar_a-admin');
-		// $this->load->view('admin/beranda_admin');
-	}
+
 
 	function tambah_dosen(){
 		$nama = $this->input->post('nama');
@@ -96,5 +100,22 @@ class Admin extends CI_Controller {
 			);
 		$this->model_mahasiswa->save($data,'mahasiswa');
 		redirect('admin/input_mahasiswa');
+	}
+
+	function deletedosen($id){
+		$this->model_dosen->delete($id);
+		redirect("admin/view_dosen");
+	}
+
+	function deletemahasiswa($id){
+		$this->model_mahasiswa->delete($id);
+		redirect("admin/view_mahasiswa");
+	}
+
+	function change_password(){
+		$user = $this->input->post('username');
+		$password = md5($this->input->post('password'));
+		$this->model_mahasiswa->change_password($user,$password);
+		redirect("admin/change_password");
 	}
 }

@@ -33,9 +33,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="col-md-7 col-md-offset-1">
         <h3>Data Dosen</h3><br>
         <div class="card shadow mb-4">
-        <!-- <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
-            </div> -->
           <div class="card-body">
             <div class="table-responsive">
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" >
@@ -43,6 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <tr>
                     <th>NIP</th>
                     <th>NAMA</th>
+                    <th>Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -50,6 +48,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <tr>
                     <td><?php echo $row->nip_dosen; ?></td>
                     <td><?php echo $row->nama_dosen; ?></td>
+                    <td>
+                      <a href="<?php echo base_url()?>admin/deletedosen/<?php echo $row->nip_dosen; ?>">
+                          <button type="button" class="btn tn-sm btn-danger">Delete </button>
+                        </a></td>
                   </tr>
                   <?php } ?>
                 </tbody>
@@ -57,14 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
           </div>
         </div>
-      </div> 
-     <!--  <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2019</span>
-          </div>
-        </div>
-      </footer> -->
+      </div>
     </div>
   </div>
   <a class="scroll-to-top rounded" href="#page-top">
@@ -87,112 +82,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </div>
     </div>
     </div>
-
-<!-- <div class ="wrapper">
-  <div id="content">
-        
-        <div class="container-fluid">
-
-        
-          <h1 class="h3 mb-4 text-gray-800">Tables</h1>
-
-        
-          <div class="card shadow mb-4">
-            <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
-            </div>
-            <div class="card-body">
-              <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" >
-                  <thead>
-                  <tr>
-                    <th>NIP</th>
-                    <th>NAMA</th>
-                  </tr>
-                </thead>
-                <tfoot>
-                <tr>
-                  <th>NIP</th>
-                  <th>NAMA</th>
-                </tr>
-              </tfoot>
-                <tbody>
-                  <?php foreach($query as $row){?>
-                    <tr>
-                        <td><?php echo $row->nip_dosen; ?></td>
-                        <td><?php echo $row->nama_dosen; ?></td>
-                    </tr>
-                  <?php } ?>
-                </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        
-      </div>
-      
-
-      
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2019</span>
-          </div>
-        </div>
-      </footer>
-      
-
-</div>
-    
-
-</div>
-
-  
-
-  
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-  </a>
-
-  
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
-        </div>
-      </div>
-    </div>
-  </div>
- -->
-
-
-  
-  <script src="<?php echo base_url('assets/vendor/jquery/jquery.min.js');?>"></script>
+<?php echo base_url('assets/vendor/jquery/jquery.min.js');?>"></script>
   <script src="<?php echo base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
 
-  
+
   <script src="<?php echo base_url('assets/vendor/jquery-easing/jquery.easing.min.js');?>"></script>
 
-  
+
   <script src="<?php echo base_url('assets/js/sb-admin-2.min.js');?>"></script>
 
-  
+
   <script src="<?php echo base_url('assets/vendor/datatables/jquery.dataTables.min.js');?>"></script>
 
-  
+
   <script src="<?php echo base_url('assets/vendor/datatables/dataTables.bootstrap4.min.js');?>"></script>
   <script src="<?php echo base_url('assets/js/demo/datatables-demo.js');?>"></script>
 
 
 </body>
-
 </html>

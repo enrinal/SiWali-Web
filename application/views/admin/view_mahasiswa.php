@@ -31,13 +31,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="row">
       <div class="col-md-7 col-md-offset-1">
        <h3>Data Mahasiswa</h3><br>
-          <!-- <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the <a target="_blank" href="https://datatables.net">official DataTables documentation</a>.</p> -->
-
-        <!-- 
-          <div class="card shadow mb-4">
-            <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
-            </div> -->
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-striped table-bordered" id="dataTable" width="100%" cellspacing="0" >
@@ -58,9 +51,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <td><?php echo $row->angkatan; ?></td>
                         <td><?php echo $row->nip_dosen; ?></td>
                         <td>
-                        <button type="button" class="btn btn-primary btn-sm"> Detail</button>
-                        <button type="button" class="btn btn-primary btn-sm"> Delete</button>
-                    </td>
+                          <a href="<?php echo base_url()?>admin/deletemahasiswa/<?php echo $row->nim_mahasiswa; ?>">
+                              <button type="button" class="btn tn-sm btn-danger">Delete </button>
+                            </a></td>
                     </tr>
                   <?php } ?>
                 </tbody>
@@ -69,7 +62,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div> -->
           </div>
         </div>
-        
+
       <!-- <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
@@ -77,12 +70,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </div>
         </div>
       </footer> -->
-      
+
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
 
-  
+
   <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -104,14 +97,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
 <!-- <body>
 
-        
+
         <div class="container-fluid">
 
-        
+
           <h1 class="h3 mb-2text-gray-800">Tables</h1>
           <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the <a target="_blank" href="https://datatables.net">official DataTables documentation</a>.</p>
 
-        
+
           <div class="card shadow mb-4">
             <div class="card-header py-3">
               <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
@@ -147,7 +140,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
           </div>
         </div>
-        
+
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
@@ -155,12 +148,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </div>
         </div>
       </footer>
-      
+
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
 
-  
+
   <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -180,24 +173,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </div>
 
 -->
-  
+
   <script src="<?php echo base_url('assets/vendor/jquery/jquery.min.js');?>"></script>
   <script src="<?php echo base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
 
-  
+
   <script src="<?php echo base_url('assets/vendor/jquery-easing/jquery.easing.min.js');?>"></script>
 
-  
+
   <script src="<?php echo base_url('assets/js/sb-admin-2.min.js');?>"></script>
 
-  
+
   <script src="<?php echo base_url('assets/vendor/datatables/jquery.dataTables.min.js');?>"></script>
 
-  
+
   <script src="<?php echo base_url('assets/vendor/datatables/dataTables.bootstrap4.min.js');?>"></script>
   <script src="<?php echo base_url('assets/js/demo/datatables-demo.js');?>"></script>
 
 
 </body>
- 
+
 </html>

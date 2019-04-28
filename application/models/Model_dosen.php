@@ -53,4 +53,15 @@ class Model_dosen extends CI_Model{
         $data = $this->db->update('dosen', $data);
     }
 
+	function delete($id){
+		$this->db->delete('dosen', array('nip_dosen' => $id));
+		$this->db->delete('users', array('username' => $id));
+    }
+
+	function change_password($id,$data){
+		$this->db->set('password',$data);
+		$this->db->where('username',$id);
+		$this->db->update('users');
+	}
+
 }

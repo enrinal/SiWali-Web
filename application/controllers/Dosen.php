@@ -90,9 +90,7 @@ function __construct() {
 	  $result = $this->model_dosen->get_profile_update($this->sess['username'], $data);
 		redirect('dosen/profil');
 	 }
+	 function konsultasi() {
+	 	$this->load->view('dosen/konsultasi_dosen');
+	 }
  }
- function konsultasi() {
- 	$this->load->view('dosen/konsultasi_dosen');
- }
-
-}

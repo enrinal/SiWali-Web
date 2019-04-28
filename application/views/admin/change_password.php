@@ -26,16 +26,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
   <?php $this->load->view('admin/topbar_admin'); ?>
   <div class="container-content">
-    <?php $this->load->view('admin/sidebar_id-admin'); ?>
+    <?php $this->load->view('admin/sidebar_pw-admin'); ?>
     <div class="row">
       <div class="col-md-6 col-md-offset-1">
-        <h3>Tambah Dosen</h3><br>
-        <form action="<?php echo base_url(). 'admin/tambah_dosen'; ?>" method="post">
+        <h3>Ganti Password</h3><br>
+        <form action="<?php echo base_url(). 'admin/change_password'; ?>" method="post">
           <div class="form-group">
-            <input type="name" class="form-control form-control-lg" name="nama" placeholder="Nama">
+            <input type="number" class="form-control form-control-lg" name="username" placeholder="Username">
           </div>
           <div class="form-group">
-            <input type="number" class="form-control form-control-lg" name="nip" placeholder="NIP DOSEN">
+            <input type="name" class="form-control form-control-lg" name="password" placeholder="Password">
           </div><br>
           <input class="btn btn-ctm" type="submit" value="Input">
         </form>

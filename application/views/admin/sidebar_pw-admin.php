@@ -29,13 +29,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <a href="<?php echo base_url('admin/input_dosen');?>" class="list-group-item">
             <i class="fa fa-user sps"></i>Input Data Dosen
           </a>
-          <a href="<?php echo base_url('admin/view_mahasiswa');?>" class="list-group-item active">
+          <a href="<?php echo base_url('admin/view_mahasiswa');?>" class="list-group-item">
             <i class="fa fa-user-graduate sps"></i>View Data Mahasiswa
           </a>
           <a href="<?php echo base_url('admin/view_dosen');?>" class="list-group-item">
             <i class="fa fa-user-tie sps"></i>View Data Dosen
           </a>
-          <a href="<?php echo base_url('admin/ganti_password');?>" class="list-group-item">
+          <a href="<?php echo base_url('admin/ganti_password');?>" class="list-group-item active">
             <i class="fa fa-key sps"></i>Change User Password
           </a>
         </div>

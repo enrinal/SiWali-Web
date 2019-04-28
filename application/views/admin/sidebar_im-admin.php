@@ -12,7 +12,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.min.css');?>">
   <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/sidebar.css');?>">
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
   integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>
@@ -34,6 +34,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </a>
           <a href="<?php echo base_url('admin/view_dosen');?>" class="list-group-item">
             <i class="fa fa-user-tie sps"></i>View Data Dosen
+          </a>
+          <a href="<?php echo base_url('admin/ganti_password');?>" class="list-group-item">
+            <i class="fa fa-key sps"></i>Change User Password
           </a>
         </div>
       </div>

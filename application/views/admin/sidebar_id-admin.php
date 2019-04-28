@@ -35,6 +35,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <a href="<?php echo base_url('admin/view_dosen');?>" class="list-group-item">
             <i class="fa fa-user-tie sps"></i>View Data Dosen
           </a>
+          <a href="<?php echo base_url('admin/ganti_password');?>" class="list-group-item">
+            <i class="fa fa-key sps"></i>Change User Password
+          </a>
         </div>
       </div>
     </div>
