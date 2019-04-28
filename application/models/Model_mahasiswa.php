@@ -7,6 +7,13 @@ class Model_mahasiswa extends CI_Model{
     return $query->result();
 	}
 
+	function get_mahasiswawali($dosen){
+		$sql = "SELECT `nim_mahasiswa`, `nama_mahasiswa`, `angkatan`, `semester_1`,
+		 `semester_2`,`semester_3`,`semester_4`,`semester_5`,`semester_6`,`semester_7`,
+		 `semester_8` FROM `mahasiswa` WHERE nip_dosen=".$dosen." ";
+		return $this->db->query($sql)->result();
+	}
+
 	function input_data($data,$table){
 		$this->db->insert($table,$data);
 	}
@@ -43,6 +50,11 @@ class Model_mahasiswa extends CI_Model{
 		return $this->db->query($sql)->row();
 	}
 
+	function get_mhsprofil($mhs){
+		$sql = "SELECT * from mahasiswa WHERE nim_mahasiswa = ".$mhs."";
+		return $this->db->query($sql)->row();
+	}
+
 	function update_ip($nim,$data){
 		$ip = (float) $data['ip'];
 		if($data['semester']=='semester_1'){
@@ -50,5 +62,46 @@ class Model_mahasiswa extends CI_Model{
                 WHERE nim_mahasiswa=".$nim."";
 			$this->db->query($sql);
 		}
+		if($data['semester']=='semester_2'){
+			$sql = "UPDATE `mahasiswa` SET semester_2='".$ip."'
+                WHERE nim_mahasiswa=".$nim."";
+			$this->db->query($sql);
+		}
+		if($data['semester']=='semester_3'){
+			$sql = "UPDATE `mahasiswa` SET semester_3='".$ip."'
+                WHERE nim_mahasiswa=".$nim."";
+			$this->db->query($sql);
+		}
+		if($data['semester']=='semester_4'){
+			$sql = "UPDATE `mahasiswa` SET semester_4='".$ip."'
+                WHERE nim_mahasiswa=".$nim."";
+			$this->db->query($sql);
+		}
+		if($data['semester']=='semester_5'){
+			$sql = "UPDATE `mahasiswa` SET semester_5='".$ip."'
+                WHERE nim_mahasiswa=".$nim."";
+			$this->db->query($sql);
+		}
+		if($data['semester']=='semester_6'){
+			$sql = "UPDATE `mahasiswa` SET semester_6='".$ip."'
+                WHERE nim_mahasiswa=".$nim."";
+			$this->db->query($sql);
+		}
+		if($data['semester']=='semester_7'){
+			$sql = "UPDATE `mahasiswa` SET semester_7='".$ip."'
+                WHERE nim_mahasiswa=".$nim."";
+			$this->db->query($sql);
+		}
+		if($data['semester']=='semester_8'){
+			$sql = "UPDATE `mahasiswa` SET semester_8='".$ip."'
+                WHERE nim_mahasiswa=".$nim."";
+			$this->db->query($sql);
+		}
 	}
+
+	function get_profile_update($id, $data){
+
+				$this->db->where('nim_mahasiswa', $id);
+				$data = $this->db->update('mahasiswa', $data);
+		}
 }

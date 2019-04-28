@@ -24,6 +24,9 @@ class Admin extends CI_Controller {
 		if (!$this->session->userdata('logged_in')) {
             redirect($this->config->item('base_url'), 'refresh');
         }
+		if ( $this->session->userdata(('level') != '1')){
+            redirect($this->config->item('base_url'), 'refresh');
+      }
         $this->sess = $this->session->userdata('logged_in');
 				$this->load->model('model_mahasiswa');
 				$this->load->model('model_dosen');

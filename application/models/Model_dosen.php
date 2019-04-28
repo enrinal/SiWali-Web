@@ -2,9 +2,16 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 
 class Model_dosen extends CI_Model{
+
+
 	function get_dosen(){
 		$query = $this->db->select('*')->from('dosen')->get();
     return $query->result();
+	}
+
+	function get_dosenprofil($dosen){
+		$sql = "SELECT * from dosen WHERE nip_dosen = ".$dosen."";
+		return $this->db->query($sql)->row();
 	}
 
 	function get_namadosen(){
@@ -39,4 +46,11 @@ class Model_dosen extends CI_Model{
             );
     		}
 	}
+
+	function get_profile_update($id, $data){
+
+        $this->db->where('nip_dosen', $id);
+        $data = $this->db->update('dosen', $data);
+    }
+
 }

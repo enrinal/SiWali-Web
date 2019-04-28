@@ -1,9 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
-<!DOCTYPE html>
-<html lang="en">
 
+<html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,31 +13,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
   integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
 </head>
 <body>
   <div class="col-md-3 container-side">
     <div class="row">
       <div class="col-md-12">
         <div class="list-group">
-          <a href="<?php echo base_url('admin');?>" class="list-group-item">
+          <a href="<?php echo base_url('mahasiswa');?>" class="list-group-item active">
             <i class="fa fa-home sps"></i>Beranda
+          <a href="" class="list-group-item">
+            <i class="fa fa-user-shield sps"></i>Konsultasi
           </a>
-          <a href="<?php echo base_url('admin/input_mahasiswa');?>" class="list-group-item">
-            <i class="fa fa-users sps"></i>Input Data Mahasiswa
+          <a href="<?php echo base_url('mahasiswa/uploadip');?>" class="list-group-item">
+            <i class="fa fa-file-upload sps"></i>Upload IP
           </a>
-          <a href="<?php echo base_url('admin/input_dosen');?>" class="list-group-item active">
-            <i class="fa fa-user sps"></i>Input Data Dosen
+          <a href="<?php echo base_url('mahasiswa/lihatip');?>" class="list-group-item ">
+            <i class="fa fa-clipboard-list sps"></i>Lihat IP
           </a>
-          <a href="<?php echo base_url('admin/view_mahasiswa');?>" class="list-group-item">
-            <i class="fa fa-user-graduate sps"></i>View Data Mahasiswa
-          </a>
-          <a href="<?php echo base_url('admin/view_dosen');?>" class="list-group-item">
-            <i class="fa fa-user-tie sps"></i>View Data Dosen
+          <a href="<?php echo base_url('mahasiswa/profil');?>" class="list-group-item ">
+            <i class="fa fa-user sps"></i>Profil
           </a>
         </div>
       </div>
     </div>
-  </div>
+    </div>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->

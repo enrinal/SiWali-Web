@@ -29,11 +29,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <div class="container-content">
   <?php $this->load->view('dosen/sidebar_m-dosen'); ?>
     <div class="row">
-      <div class="col-md-7 col-md-offset-1">
+      <div class="col-md-8">
         <h3>Data Mahasiswa Perwalian</h3><br>
           <!-- <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the <a target="_blank" href="https://datatables.net">official DataTables documentation</a>.</p> -->
 
-        <!-- 
+        <!--
           <div class="card shadow mb-4">
             <div class="card-header py-3">
               <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
@@ -46,17 +46,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <th>NIM</th>
                     <th>NAMA</th>
                     <th>ANGKATAN</th>
-                    <th>NIP DOSEN</th>
+                    <th>Semester 1</th>
+                    <th>Semester 2</th>
+                    <th>Semester 3</th>
+                    <th>Semester 4</th>
+                    <th>Semester 5</th>
+                    <th>Semester 6</th>
+                    <th>Semester 7</th>
+                    <th>Semester 8</th>
                     <th>Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
                   <?php foreach($query as $row){?>
                     <tr>
-                        <td><?php echo $row->nim_mahasiswa; ?></td>
-                        <td><?php echo $row->nama_mahasiswa; ?></td>
-                        <td><?php echo $row->angkatan; ?></td>
-                        <td><?php echo $row->nip_dosen; ?></td>
+                        <td><?php echo $row->nim_mahasiswa;?></td>
+                        <td><?php echo $row->nama_mahasiswa;?></td>
+                        <td><?php echo $row->angkatan;?></td>
+                        <td><?php echo $row->semester_1;?></td>
+                        <td><?php echo $row->semester_2;?></td>
+                        <td><?php echo $row->semester_3;?></td>
+                        <td><?php echo $row->semester_4;?></td>
+                        <td><?php echo $row->semester_5;?></td>
+                        <td><?php echo $row->semester_6;?></td>
+                        <td><?php echo $row->semester_7;?></td>
+                        <td><?php echo $row->semester_8;?></td>
                         <td>
                         <button type="button" class="btn btn-primary btn-sm"> Detail</button>
                         <button type="button" class="btn btn-primary btn-sm"> Delete</button>
@@ -69,7 +83,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div> -->
           </div>
         </div>
-        
+
       <!-- <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
@@ -77,12 +91,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </div>
         </div>
       </footer> -->
-      
+
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
 
-  
+
   <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -100,7 +114,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </div>
     </div>
 
-<!-- 
+<!--
         Begin Page Content
         <div class="container-fluid">
 
@@ -164,7 +178,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     End of Content Wrapper
 
-  
+
   End of Page Wrapper
 
    Scroll to Top Button

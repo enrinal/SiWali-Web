@@ -35,7 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <ul class="nav navbar-nav navbar-right">
           <!-- glyphicon glyphicon-user -->
           <li><a href=""><span class="glyphicon glyphicon-user"></span>Dosen</a></li>
-          <li><a href="">Keluar<span class="glyphicon glyphicon-log-out"></span></a></li>
+          <li><a href="<?php echo base_url()?>Login/logout">Keluar<span class="glyphicon glyphicon-log-out"></span></a></li>
         </ul>
     </nav>
   </div>
