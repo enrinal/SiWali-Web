@@ -40,7 +40,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <nav class="navbar">
       <ul class="nav navbar-nav navbar-right">
         <!-- glyphicon glyphicon-user -->
-        <li><a href=""><span class="glyphicon glyphicon-user"></span>Mahasiswa</a></li>
+        <li><a href="<?php echo base_url('mahasiswa/profil');?>"><span class="glyphicon glyphicon-user"></span>Mahasiswa</a></li>
+        <li><a href="<?php echo base_url('mahasiswa/ganti_password');?>"><span class="glyphicon glyphicon-cog"></span>Change Password</a></li>
         <li><a href="<?php echo base_url()?>Login/logout">Keluar<span class="glyphicon glyphicon-log-out"></span></a></li>
       </ul>
     </nav>

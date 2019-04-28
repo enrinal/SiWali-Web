@@ -9,7 +9,10 @@ class Mahasiswa extends CI_Controller{
 		 if (!$this->session->userdata('logged_in')) {
             redirect($this->config->item('base_url'), 'refresh');
         }
-         $this->sess = $this->session->userdata('logged_in');
+		if ( $this->session->userdata('level') != '3'){
+						redirect($this->config->item('base_url'), 'refresh');
+				}
+     $this->sess = $this->session->userdata('logged_in');
 		 $this->load->model('model_mahasiswa');
 		 $this->load->model('model_dosen');
 	 }
@@ -23,12 +26,12 @@ class Mahasiswa extends CI_Controller{
 	 {
 		// $this->load->view('mahasiswa/navbar_mhs');
 		// $this->load->view('mahasiswa/topbar_mhs');
-		$data['query'] = $this->model_mahasiswa->get_mhsprofil($this->sess['username']);
+		 $data['query'] = $this->model_mahasiswa->get_mhsprofil($this->session->userdata('username'));
 		 $this->load->view('mahasiswa/profil_mhs',$data);
 	 }
 	 function lihatip()
 	 {
-		 $data['query'] = $this->model_mahasiswa->get_ip($this->sess['username']);
+		 $data['query'] = $this->model_mahasiswa->get_ip($this->session->userdata('username'));
 		// $this->load->view('mahasiswa/navbar_mhs');
          //$this->load->view('mahasiswa/topbar_mhs');
 		 $this->load->view('mahasiswa/lihatip',$data);
@@ -48,12 +51,9 @@ class Mahasiswa extends CI_Controller{
 			 'semester' => $semester,
 			 'ip' => $ip
 			 );
-		 $this->model_mahasiswa->update_ip($this->sess['username'],$data);
+		 $this->model_mahasiswa->update_ip($this->session->userdata('username'),$data);
 		 redirect('mahasiswa/uploadip');
 	 }
-
-
-
 		 public function update(){
 	  	 $data = $this->input->post();
 	  	 // $config['upload_path']          = './upload/fotodosen/';
@@ -74,7 +74,7 @@ class Mahasiswa extends CI_Controller{
 	  	 // if(isset($_FILES['foto_dosen']['name']) and $_FILES['foto_dosen']['name']){
 	  		//  $data['foto_dosen'] = $_FILES['foto_dosen']['name'];
 	  	 // }
-	  	  $result = $this->model_mahasiswa->get_profile_update($this->sess['username'], $data);
+	  	  $result = $this->model_mahasiswa->get_profile_update($this->session->userdata('username'), $data);
 	  		redirect('mahasiswa/profil');
 	  	 }
 	 function konsultasi() {
@@ -84,5 +84,19 @@ class Mahasiswa extends CI_Controller{
  	 function tiket(){
  	 	$this->load->view('mahasiswa/create_ticket');
  	 }
+
+	 function ganti_password(){
+ 		// $this->load->view('admin/sidebar_im-admin');
+ 		// $this->load->view('admin/topbar_admin');
+ 		$this->load->view('mahasiswa/change_password');
+
+ 	}
+
+	function change_password(){
+		$user = $this->session->userdata('username');
+		$password = md5($this->input->post('password'));
+		$this->model_mahasiswa->change_password($user,$password);
+		redirect($this->config->item('base_url'), 'refresh');
+	}
 
 }

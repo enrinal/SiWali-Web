@@ -2,8 +2,6 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 
 class Model_dosen extends CI_Model{
-
-
 	function get_dosen(){
 		$query = $this->db->select('*')->from('dosen')->get();
     return $query->result();
@@ -48,7 +46,6 @@ class Model_dosen extends CI_Model{
 	}
 
 	function get_profile_update($id, $data){
-
         $this->db->where('nip_dosen', $id);
         $data = $this->db->update('dosen', $data);
     }
@@ -62,6 +59,16 @@ class Model_dosen extends CI_Model{
 		$this->db->set('password',$data);
 		$this->db->where('username',$id);
 		$this->db->update('users');
+	}
+
+	function flag($id,$flag){
+		if($flag=="1"){
+			$this->db->set('flag','0');
+		}else {
+			$this->db->set('flag','1');
+		}
+		$this->db->where('nim_mahasiswa',$id);
+		$this->db->update('mahasiswa');
 	}
 
 }

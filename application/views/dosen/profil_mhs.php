@@ -25,9 +25,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 </head>
 <body>
-	<?php $this->load->view('Mahasiswa/topbar_mahasiswa'); ?>
+	<?php $this->load->view('Dosen/topbar_dosen'); ?>
 		<div class="container-content">
-		<?php $this->load->view('Mahasiswa/sidebar_p-mhs'); ?>
+		<?php $this->load->view('Dosen/sidebar_p-dosen'); ?>
 		<div class="row">
   		<div class="col-md-offset-4">
   			<div class="col-md-11">

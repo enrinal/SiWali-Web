@@ -46,14 +46,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <th>NIM</th>
                     <th>NAMA</th>
                     <th>ANGKATAN</th>
-                    <th>Semester 1</th>
-                    <th>Semester 2</th>
-                    <th>Semester 3</th>
-                    <th>Semester 4</th>
-                    <th>Semester 5</th>
-                    <th>Semester 6</th>
-                    <th>Semester 7</th>
-                    <th>Semester 8</th>
+                    <th>NAMA WALI</th>
+                    <th>NO TELP WALI</th>
+                    <th>Status</th>
                     <th>Aksi</th>
                   </tr>
                 </thead>
@@ -63,17 +58,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <td><?php echo $row->nim_mahasiswa;?></td>
                         <td><?php echo $row->nama_mahasiswa;?></td>
                         <td><?php echo $row->angkatan;?></td>
-                        <td><?php echo $row->semester_1;?></td>
-                        <td><?php echo $row->semester_2;?></td>
-                        <td><?php echo $row->semester_3;?></td>
-                        <td><?php echo $row->semester_4;?></td>
-                        <td><?php echo $row->semester_5;?></td>
-                        <td><?php echo $row->semester_6;?></td>
-                        <td><?php echo $row->semester_7;?></td>
-                        <td><?php echo $row->semester_8;?></td>
+                        <td><?php echo $row->nama_wali;?></td>
+                        <td><?php echo $row->no_telp_wali;?></td>
+                        <td><?php if($row->flag=='0'){
+                          echo "Aman";
+                        }else{
+                          echo "Flag";
+                        }?></td>
                         <td>
-                        <button type="button" class="btn btn-primary btn-sm"> Detail</button>
-                        <button type="button" class="btn btn-primary btn-sm"> Delete</button>
+                          <a href="<?php echo base_url()?>dosen/flagmahasiswa/<?php echo $row->nim_mahasiswa; ?>/<?php echo $row->flag; ?>">
+                            <button href="" type="button" class="btn btn-danger btn-sm">Flag</button>
+                            </a>
+                            <a href="<?php echo base_url()?>dosen/profilmahasiswa/<?php echo $row->nim_mahasiswa; ?>">
+                              <button type="button" class="btn btn-primary btn-sm">Profil</button>
+                              </a>
+                              <a href="<?php echo base_url()?>dosen/nimmahasiswa/<?php echo $row->nim_mahasiswa; ?>">
+                                <button type="button" class="btn btn-success btn-sm">IP</button>
+                                </a>
                     </td>
                     </tr>
                   <?php } ?>

@@ -20,9 +20,12 @@ class Dosen extends CI_Controller{
 function __construct() {
 	 parent::__construct();
 	 if (!$this->session->userdata('logged_in')) {
-            redirect($this->config->item('base_purl'), 'refresh');
+            redirect($this->config->item('base_url'), 'refresh');
         }
-	$this->sess = $this->session->userdata('logged_in');
+	 if ( $this->session->userdata('level') != '2'){
+	          redirect($this->config->item('base_url'), 'refresh');
+	      }
+   $this->sess = $this->session->userdata('logged_in');
 	 $this->load->model('model_mahasiswa');
 	 $this->load->model('model_dosen');
  }
@@ -53,14 +56,14 @@ function __construct() {
  public function profil(){
  	 // $this->load->view('dosen/topbar_dosen');
  	 // $this->load->view('dosen/sidebar_dosen');
-	 $data['query'] = $this->model_dosen->get_dosenprofil($this->sess['username']);
+	 $data['query'] = $this->model_dosen->get_dosenprofil($this->session->userdata('username'));
 	 $this->load->view('dosen/profil-dosen',$data);
  }
 
  function mahasiswa_wali(){
 	 // $this->load->view('dosen/navbar_dosen');
 	 // $this->load->view('dosen/topbar_dosen');
-	 $data['query'] = $this->model_mahasiswa->get_mahasiswawali($this->sess['username']);
+	 $data['query'] = $this->model_mahasiswa->get_mahasiswawali($this->session->userdata('username'));
 	 $this->load->view('dosen/view_mahasiswa',$data);
  }
  function upload_laporan() {
@@ -87,10 +90,43 @@ function __construct() {
 	 // if(isset($_FILES['foto_dosen']['name']) and $_FILES['foto_dosen']['name']){
 		//  $data['foto_dosen'] = $_FILES['foto_dosen']['name'];
 	 // }
-	  $result = $this->model_dosen->get_profile_update($this->sess['username'], $data);
+	  $result = $this->model_dosen->get_profile_update($this->session->userdata('username'), $data);
 		redirect('dosen/profil');
 	 }
 	 function konsultasi() {
 	 	$this->load->view('dosen/konsultasi_dosen');
 	 }
+
+	 function ganti_password(){
+ 		// $this->load->view('admin/sidebar_im-admin');
+ 		// $this->load->view('admin/topbar_admin');
+ 		$this->load->view('dosen/change_password');
+
+ 	}
+
+	function change_password(){
+		$user = $this->session->userdata('username');
+		$password = md5($this->input->post('password'));
+		$this->model_mahasiswa->change_password($user,$password);
+		redirect($this->config->item('base_url'), 'refresh');
+	}
+
+	function flagmahasiswa(){
+		$data = $this->uri->segment(3);
+		$flag = $this->uri->segment(4);
+		$this->model_dosen->flag($data,$flag);
+		redirect('dosen/mahasiswa_wali');
+	}
+
+	function profilmahasiswa(){
+		$data['query'] = $this->model_mahasiswa->get_mhsprofil($this->uri->segment(3));
+		$this->load->view('dosen/profil_mhs',$data);
+	}
+
+	function nimmahasiswa(){
+		$data['query'] = $this->model_mahasiswa->get_ip($this->uri->segment(3));
+	  $this->load->view('dosen/lihatip',$data);
+	}
+
+
  }

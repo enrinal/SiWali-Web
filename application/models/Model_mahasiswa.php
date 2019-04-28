@@ -8,15 +8,34 @@ class Model_mahasiswa extends CI_Model{
 	}
 
 	function get_mahasiswawali($dosen){
-		$sql = "SELECT `nim_mahasiswa`, `nama_mahasiswa`, `angkatan`, `semester_1`,
-		 `semester_2`,`semester_3`,`semester_4`,`semester_5`,`semester_6`,`semester_7`,
-		 `semester_8` FROM `mahasiswa` WHERE nip_dosen=".$dosen." ";
+		$sql = "SELECT `nim_mahasiswa`, `nama_mahasiswa`, `angkatan`, `nama_wali`,
+		`no_telp_wali`,`flag`FROM `mahasiswa` WHERE nip_dosen=".$dosen." ";
 		return $this->db->query($sql)->result();
 	}
 
 	function input_data($data,$table){
 		$this->db->insert($table,$data);
 	}
+
+
+	private function _uploadImage(){
+    $config['upload_path']          = './upload/avatar/';
+    $config['allowed_types']        = 'gif|jpg|png';
+    $config['file_name']            = $this->nim_mahasiswa;
+    $config['overwrite']						= true;
+    $config['max_size']             = 1024; // 1MB
+    // $config['max_width']            = 1024;
+    // $config['max_height']           = 768;
+
+    $this->load->library('upload', $config);
+
+    if ($this->upload->do_upload('image')) {
+        return $this->upload->data("file_name");
+    }
+
+    return "default.jpg";
+	}
+
 
 	function save($data,$table){
 		$this->db->trans_begin();
@@ -51,7 +70,8 @@ class Model_mahasiswa extends CI_Model{
 	}
 
 	function get_mhsprofil($mhs){
-		$sql = "SELECT * from mahasiswa WHERE nim_mahasiswa = ".$mhs."";
+		$sql = "SELECT * FROM `mahasiswa` JOIN `dosen` ON `mahasiswa`.`nip_dosen` = `dosen`.`nip_dosen`
+		WHERE `nim_mahasiswa` = ".$mhs."";
 		return $this->db->query($sql)->row();
 	}
 
@@ -100,9 +120,10 @@ class Model_mahasiswa extends CI_Model{
 	}
 
 	function get_profile_update($id, $data){
-
+				$post = $this->input->post();
+				$this->
 				$this->db->where('nim_mahasiswa', $id);
-				$data = $this->db->update('mahasiswa', $data);
+				$this->db->update('mahasiswa', $data);
 		}
 
 		function delete($id){
