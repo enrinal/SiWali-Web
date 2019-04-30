@@ -128,5 +128,14 @@ function __construct() {
 	  $this->load->view('dosen/lihatip',$data);
 	}
 
+	public function uploadlaporan(){
+		$dosen = $this->model_dosen;
+	  $dosen->savelaporan();
+	  $this->load->view("dosen/upload_laporan");
+	}
 
+	function lihat_laporan(){
+				$data['query'] = $this->model_dosen->get_laporan();
+				$this->load->view('dosen/view_laporan',$data);
+			}
  }

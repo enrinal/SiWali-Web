@@ -27,7 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 <?php $this->load->view('dosen/topbar_dosen'); ?>
 <div class="container-content">
-    <?php $this->load->view('dosen/side_beranda'); ?>
+    <?php $this->load->view('dosen/side_b'); ?>
 
 
 </body>

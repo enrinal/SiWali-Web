@@ -2,6 +2,9 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 
 class Model_dosen extends CI_Model{
+
+	private $_table = "laporan";
+
 	function get_dosen(){
 		$query = $this->db->select('*')->from('dosen')->get();
     return $query->result();
@@ -70,5 +73,34 @@ class Model_dosen extends CI_Model{
 		$this->db->where('nim_mahasiswa',$id);
 		$this->db->update('mahasiswa');
 	}
+	private function _uploadberkas()
+	{
+		$config['upload_path']          = './upload/berkas/';
+		$config['allowed_types']        = 'pdf';
+		$config['overwrite']			      = true;
+		$config['max_size']             = 1024; // 1MB
+		// $config['max_width']            = 1024;
+		// $config['max_height']           = 768;
 
+		$this->load->library('upload', $config);
+		if ($this->upload->do_upload('berkas_laporan')) {
+			return $this->upload->data("file_name");
+		}
+	}
+
+	public function savelaporan()
+    {
+        $post = $this->input->post();
+        $this->tgl_upload = date('Y-m-d H:i:s');;
+		    $this->semester = $post["semester"];
+				$this->tahun_ajaran = $post["tahun_ajaran"];
+				$this->nip_dosen = $this->session->userdata('username');
+		    $this->berkas_laporan = $this->_uploadberkas();
+        $this->db->insert($this->_table, $this);
+    }
+
+		function get_laporan(){
+			$sql = "SELECT * FROM `laporan` JOIN `dosen` ON `laporan`.`nip_dosen` = `dosen`.`nip_dosen`";
+			return $this->db->query($sql)->result();
+		}
 }

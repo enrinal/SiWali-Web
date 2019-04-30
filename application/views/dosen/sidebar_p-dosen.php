@@ -32,6 +32,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <a href="<?php echo base_url('dosen/upload_laporan');?>" class="list-group-item">
             <i class="fa fa-file-upload sps"></i>Upload Laporan
           </a>
+          <a href="<?php echo base_url('dosen/lihat_laporan');?>" class="list-group-item ">
+            <i class="fa fa-file-upload sps"></i>Lihat Laporan
+          </a>
           <a href="<?php echo base_url('dosen/profil');?>" class="list-group-item active">
             <i class="fa fa-user sps"></i>Profil
           </a>

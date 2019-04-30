@@ -7,116 +7,65 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
-<head>
-  <title>Upload Laporan</title>
-
-  <style type="text/css">
-    body 
-    .container-content{
-    background: #fff;
-    box-shadow: 4px 4px 22px 0px rgba(0, 0, 0, 0.2);
-    padding-top: 20px;
-    margin-right: 0px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-#Terkirim {
-  padding-left: 270px;
-  padding-right: 100px;
-  padding-top: auto;
-  font-weight: bold;
-}
-
-#button {
-  padding-left: 270px;
-  padding-right: auto;
-  padding-top: 180px;
-  font-weight: bold;
-}
-
-#progress {
-  padding-left: 270px;
-  padding-right: 100px;
-  padding-top: auto;
-  font-weight: bold;
-}
 
 
-  </style>
-</head>
+  <head>
+  	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Upload Laporan</title>
 
-<body>
-  <?php $this->load->view('dosen/topbar_dosen'); ?>
-  <div class="container-content">
-    <?php $this->load->view('dosen/side_upld_lap'); ?>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.min.css');?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/create.css');?>">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-  <div class="container">
-        <h4>Upload File Laporan Perwalian</h4>
-        <br>
-        
-          <!-- Standar Form -->
-          <h5>Pilih File</h5>
-          <form action="" method="post" enctype="multipart/form-data" id="js-upload-form">
-                <input type="file" id="avatar" name="avatar" accept="file/pdf">
-                <br>
-          </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="<?php echo base_url('assets/js/bootstrap.min.js')?>"></script>
 
-          <!-- Drop Zone -->
-          <div class="col-md-4">
-            <div style=
-            "border: 1px solid #909296;
-            height: 150px;
-            margin: 10px 0px;
-            text-align: center;
-            width: 250px;">
+  </head>
 
-          <h4>Tahan dan Tarik File</h4>
-          <br>
-          <div class="upload" id="Drop">
-          <img src="<?php echo base_url('assets/css/image/upload.png')?>"width="100px" height="70px">
+  <body>
+    <?php $this->load->view('dosen/topbar_dosen'); ?>
+    <div class="container-content">
+    	<?php $this->load->view('dosen/side_upld_lap'); ?>
+    	<div class="row">
+    		<div class="col-md-offset-4">
+    			<h3>Upload Laporan</h3>
+    			<hr>
+    		    <form class="g-py-15" name="uploadLaporan" role="form" data-toggle="validator" class="form-horizontal" action="<?php echo base_url()?>dosen/uploadlaporan" method="POST" enctype="multipart/form-data">
+    				<div class="form-group">
+              <label for="periode_lprn" class="col-sm-2 control-label">Periode Laporan</label>
+              <div class="col-sm-4">
+                    <select class="form-control" name="semester">
+                      <option value="1" selected="">Semester Ganjil</option>
+                      <option value="2">Semester Genap</option>
+                    </select>
+              </div>
+            </div><br><br><br>
+            <div class="form-group">
+              <label for="tahun_ajaran" class="col-sm-2 control-label">Tahun Ajaran</label>
+              <div class="col-sm-4">
+                    <input class="form-control input-sm validate[required]" type="text" name="tahun_ajaran" value="" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=&quot;); cursor: auto;">
+              </div>
+            </div><br><br>
+            <div class="berkas_laporan">
+              <label for="no_reg_kkn" class="col-sm-2 control-label">Berkas Laporan</label>
+              <div class="col-sm-4">
+                    <input class="form-control-file input-sm validate[required]" type="file" name="berkas_laporan" value="">
+              </div>
+            </div>
+            <br><br><br>
+            <h4>Keterangan</h4>
+            <div class="form-group">
+              <div class="col-sm-8">
+                <p>Berkas laporan yang dapat diunggah adalah berkas doc, docx atau pdf dengan ukuran maksimal 10 MB.</p>
+              </div>
+            </div><br><br>
+            <div class="col-sm-offset-4">
+  						<button type="submit" class="btn btn-ctm">Simpan</button>
+            </div><br><br>
+        	</div>
         </div>
-
-          </div>
-          </div>
-          
-          <!-- Progress Bar -->
-        
-          <div id="button">
-            <div class="button">
-              <button type="submit" class="btn btn-sm btn-primary" id="js-upload-submit">Upload File
-              </button>
-              <br> <br>
-            </div>
-          </div>
-
-          <div id="progress">
-            <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
-            </div>
-          </div>
-          </div>
-          
-          <!-- Upload Finished -->
-          <div id="Terkirim">
-            <div class="Finished">
-            <br>
-      
-            <h5>File Terkirim</h5>
-            
-              <div class="list-group">
-              <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>file1.pdf</a>
-              <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>file2.pdf</a>
-              <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>file3.pdf</a>
-            </div>
-            
-            </div>
-          </div>
-          </div>
-          
-        
-      
-    </div> <!-- /container -->
+    </div>
     </body>

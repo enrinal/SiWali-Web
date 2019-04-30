@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.min.css');?>">
   <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/sidebar.css');?>">
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
   integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 </head>
@@ -32,6 +32,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <a href="<?php echo base_url('dosen/upload_laporan');?>" class="list-group-item">
             <i class="fa fa-file-upload sps"></i>Upload Laporan
           </a>
+          <a href="<?php echo base_url('dosen/lihat_laporan');?>" class="list-group-item ">
+            <i class="fa fa-file-upload sps"></i>Lihat Laporan
+          </a>
           <a href="<?php echo base_url('dosen/profil');?>" class="list-group-item">
             <i class="fa fa-user sps"></i>Profil
           </a>
@@ -45,5 +48,3 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <script src="<?php echo base_url('assets/js/bootstrap.min.js')?>"></script>
 </body>
 </html>
-
-
