@@ -15,13 +15,13 @@
   <script src="<?php echo base_url('assets/js/bootstrap.min.js')?>"></script>
 </head>
 <body>
-  <?php $this->load->view('dosen/topbar_dosen'); ?>
+  <?php $this->load->view('mahasiswa/topbar_mahasiswa'); ?>
   <div class="container-content">
-    <?php $this->load->view('dosen/sidebar_k-dosen'); ?>
+    <?php $this->load->view('mahasiswa/sidebar_k-mhs'); ?>
     <div class="row">
       <div class="col-md-offset-1">
-        <a class="btn btn-default" href="<?php echo base_url(). 'dosen/konsultasi'; ?>" role="button">Open Ticket</a>
-        <a class="btn btn-default" href="<?php echo base_url(). 'dosen/konsultasiclose'; ?>" role="button">Close Ticket</a>
+        <a class="btn btn-default" href="<?php echo base_url(). 'mahasiswa/konsultasi'; ?>" role="button">Open Ticket</a>
+        <a class="btn btn-default" href="<?php echo base_url(). 'mahasiswa/konsultasiclose'; ?>" role="button">Close Ticket</a>
         <a href="<?php echo base_url('mahasiswa/tiket')?>">
         <button class="btn btn-primary create">Create New Ticket</button></a>
       </br> </br>
@@ -45,7 +45,7 @@
               <?php foreach($query as $row){?>
               <tr>
                 <td><?php echo $row->ticket_time;?></td>
-                <td><a href="<?php echo base_url()?>dosen/pesan/<?php echo $row->ticket_id; ?>"><?php echo $row->ticket_subjek;?></td>
+                <td><a href="<?php echo base_url()?>mahasiswa/pesanclose/<?php echo $row->ticket_id; ?>"><?php echo $row->ticket_subjek;?></td>
                 <td><?php echo $row->nama_dosen;?></td>
                 <td><?php echo $row->nama_mahasiswa;?></td>
                 <td>

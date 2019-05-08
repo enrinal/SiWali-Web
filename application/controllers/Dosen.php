@@ -28,6 +28,7 @@ function __construct() {
    $this->sess = $this->session->userdata('logged_in');
 	 $this->load->model('model_mahasiswa');
 	 $this->load->model('model_dosen');
+	 $this->load->model('model_ticket');
  }
 
  public function index()
@@ -94,8 +95,13 @@ function __construct() {
 		redirect('dosen/profil');
 	 }
 	 function konsultasi() {
-	 	$this->load->view('dosen/konsultasi_dosen');
-	 }
+		 $data['query'] = $this->model_ticket->get_ticket_dosen_open($this->session->userdata('username'));
+ 		 $this->load->view('dosen/konsultasi_dosen',$data);
+ 	 }
+	 function konsultasiclose() {
+		 $data['query'] = $this->model_ticket->get_ticket_dosen_close($this->session->userdata('username'));
+ 		 $this->load->view('dosen/konsultasi_dosen_close',$data);
+ 	 }
 
 	 function ganti_password(){
  		// $this->load->view('admin/sidebar_im-admin');
@@ -137,5 +143,35 @@ function __construct() {
 	function lihat_laporan(){
 				$data['query'] = $this->model_dosen->get_laporan();
 				$this->load->view('dosen/view_laporan',$data);
-			}
+	}
+
+	function pesan($id){
+		$data['query'] = $this->model_ticket->get_pesan($id);
+		$this->load->view('dosen/pesan_dosen',$data);
+	}
+
+	function pesanclose($id){
+		$data['query'] = $this->model_ticket->get_pesan($id);
+		$this->load->view('dosen/pesan_dosen_close',$data);
+	}
+
+	function send_pesan(){
+		$pesan = $this->input->post('pesan');
+		$ticket_id = $this->input->post('ticket_id');
+		$nip_dosen  = $this->session->userdata('username');
+		$nama_dosen = $this->model_dosen->get_dosenprofil($nip_dosen);
+		$data = array(
+			'ticket_id' => $ticket_id,
+			'pesan'=> $pesan,
+			'pengirim' => $nama_dosen->nama_dosen,
+			'pesan_tanggal' => date('Y-m-d H:i:s')
+		);
+		$this->model_ticket->send_pesan($data);
+		redirect('dosen/pesan/'.$ticket_id);
+	}
+
+	function close_ticket($id){
+		$this->model_ticket->close_ticket($id);
+		redirect('dosen/konsultasi');
+	}
  }

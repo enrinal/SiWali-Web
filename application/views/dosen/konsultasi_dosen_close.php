@@ -45,7 +45,7 @@
               <?php foreach($query as $row){?>
               <tr>
                 <td><?php echo $row->ticket_time;?></td>
-                <td><a href="<?php echo base_url()?>dosen/pesan/<?php echo $row->ticket_id; ?>"><?php echo $row->ticket_subjek;?></td>
+                <td><a href="<?php echo base_url()?>dosen/pesanclose/<?php echo $row->ticket_id; ?>"><?php echo $row->ticket_subjek;?></td>
                 <td><?php echo $row->nama_dosen;?></td>
                 <td><?php echo $row->nama_mahasiswa;?></td>
                 <td>

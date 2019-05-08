@@ -67,6 +67,11 @@ class Mahasiswa extends CI_Controller{
  		 $this->load->view('mahasiswa/konsultasi_mhs',$data);
  	 }
 
+	 function konsultasiclose() {
+		 $data['query'] = $this->model_ticket->get_ticket_close($this->session->userdata('username'));
+ 		 $this->load->view('mahasiswa/konsultasi_mhs_close',$data);
+ 	 }
+
  	 function tiket(){
 		$data['query'] = $this->model_mahasiswa->get_mhsprofil($this->session->userdata('username'));
  	 	$this->load->view('mahasiswa/create_ticket',$data);
@@ -121,6 +126,11 @@ class Mahasiswa extends CI_Controller{
 	function pesan($id){
 		$data['query'] = $this->model_ticket->get_pesan($id);
 		$this->load->view('mahasiswa/pesan_mhs',$data);
+	}
+
+	function pesanclose($id){
+		$data['query'] = $this->model_ticket->get_pesan($id);
+		$this->load->view('mahasiswa/pesan_mhs_close',$data);
 	}
 
 

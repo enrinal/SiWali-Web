@@ -20,8 +20,8 @@
     <?php $this->load->view('mahasiswa/sidebar_k-mhs'); ?>
     <div class="row">
       <div class="col-md-offset-1">
-        <button class="btn btn-default">Open Ticket</button>
-        <button class="btn btn-default">Close Ticket</button>
+        <a class="btn btn-default" href="<?php echo base_url(). 'mahasiswa/konsultasi'; ?>" role="button">Open Ticket</a>
+        <a class="btn btn-default" href="<?php echo base_url(). 'mahasiswa/konsultasiclose'; ?>" role="button">Close Ticket</a>
         <a href="<?php echo base_url('mahasiswa/tiket')?>">
         <button class="btn btn-primary create">Create New Ticket</button></a>
       </br> </br>
