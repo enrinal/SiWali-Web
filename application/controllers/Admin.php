@@ -116,6 +116,6 @@ class Admin extends CI_Controller {
 		$user = $this->input->post('username');
 		$password = md5($this->input->post('password'));
 		$this->model_mahasiswa->change_password($user,$password);
-		redirect("admin/change_password");
+		redirect("admin/ganti_password");
 	}
 }

@@ -75,6 +75,18 @@ class Model_mahasiswa extends CI_Model{
 		return $this->db->query($sql)->row();
 	}
 
+	function get_mhsnama($mhs){
+		$sql = "SELECT * FROM `mahasiswa`
+		WHERE `nim_mahasiswa` = ".$mhs."";
+		return $this->db->query($sql)->row();
+	}
+
+	function get_mhsdosen($mhs){
+		$sql = "SELECT nip_dosen FROM `mahasiswa`
+		WHERE `nim_mahasiswa` = ".$mhs."";
+		return $this->db->query($sql)->row();
+	}
+
 	function update_ip($nim,$data){
 		$ip = (float) $data['ip'];
 		if($data['semester']=='semester_1'){

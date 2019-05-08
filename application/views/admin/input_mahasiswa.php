@@ -12,7 +12,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Input Data Mahasiswa</title>
+  <title>Input Data Mahasvvalueiswa</title>
 
   <!-- Custom fonts for this template-->
   <link href="<?php echo base_url('assets/vendor/fontawesome-free/css/all.css');?>" rel="stylesheet" type="text/css">
@@ -82,8 +82,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <option value=<?php echo $row->nip_dosen;?>><?php echo $row->nama_dosen; ?></option>
                       <?php endforeach;?>
                     </select>
-                    </div>                
-                  
+                    </div>
+
                 <input class="btn btn-primary btn-user btn-block" type="submit" value="Input">
               </form>
             </div>

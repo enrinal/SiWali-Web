@@ -19,16 +19,41 @@
   <div class="container-content">
     <?php $this->load->view('mahasiswa/sidebar_k-mhs'); ?>
     <div class="row">
-      <div class="col-md-offset-4">
+      <div class="col-md-offset-1">
         <button class="btn btn-default">Open Ticket</button>
         <button class="btn btn-default">Close Ticket</button>
         <a href="<?php echo base_url('mahasiswa/tiket')?>">
         <button class="btn btn-primary create">Create New Ticket</button></a>
-        <div class="panel panel-default">
-          <div class="no_ticket">
+      </br> </br>
+
+        <div class="card-body">
+          <!-- <div class="no_ticket">
             <img src="<?php echo base_url('assets/css/image/ticket.png')?>"><br>
             <label>You don't have any ticket</label>
-          </div>
+          </div> -->
+          <div class="table-responsive">
+          <table class="table table-borderless">
+            <thead>
+              <tr>
+                <th scope="col">Time</th>
+                <th scope="col">Subject</th>
+                <th scope="col">Nama Dosen</th>
+                <th scope="col">Nama Mahasiswa</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php foreach($query as $row){?>
+              <tr>
+                <td><?php echo $row->ticket_time;?></td>
+                <td><a href="<?php echo base_url()?>mahasiswa/pesan/<?php echo $row->ticket_id; ?>"><?php echo $row->ticket_subjek;?></td>
+                <td><?php echo $row->nama_dosen;?></td>
+                <td><?php echo $row->nama_mahasiswa;?></td>
+                <td>
+              </tr>
+            <?php } ?>
+            </tbody>
+          </table>
+        </div>
         </div>
       </div>
     </div>

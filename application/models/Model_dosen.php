@@ -91,7 +91,7 @@ class Model_dosen extends CI_Model{
 	public function savelaporan()
     {
         $post = $this->input->post();
-        $this->tgl_upload = date('Y-m-d H:i:s');;
+        $this->tgl_upload = date('Y-m-d H:i:s');
 		    $this->semester = $post["semester"];
 				$this->tahun_ajaran = $post["tahun_ajaran"];
 				$this->nip_dosen = $this->session->userdata('username');
