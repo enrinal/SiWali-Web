@@ -13,13 +13,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script type="text/javascript">
       var base_url_w = 'http://siakad.itera.ac.id/';
     </script>
-    <script src="http://siakad.itera.ac.id/assets/js/jquery.min.js"></script>  
+    <script src="http://siakad.itera.ac.id/assets/js/jquery.min.js"></script>
 
     <!-- Bootstrap -->
     <script src="http://siakad.itera.ac.id/assets/bootstrap/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="http://siakad.itera.ac.id/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://siakad.itera.ac.id/assets/css/css.css" type="text/css" media="screen" />
-    
+
   <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.min.css');?>">
   <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/prfl_mhs.css');?>">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -55,7 +55,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <a href="#" class="small-box-footer"></a>
         </div>
     </div><!-- ./col -->
-    
+
     <!-- ./col -->
     <div class="col-lg-4 col-xs-6">
         <!-- small box -->
@@ -95,7 +95,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="box-header">
         <i class="fa fa-info-circle" aria-hidden="true"></i>
         <h3 class="box-title text-center">PANDUAN SIWALI</h3>
-    
+
     </div>
     <div class="box-body">
         <p>SIAKAD telah sesuai dengan Buku Peraturan Akademik Dan Kemahasiswaan Institut Teknologi Sumatera Pasal 6.4 tentang Nilai Rata-Rata, Indeks Prestasi, dan Indeks Prestasi Kumulatif.</p>
