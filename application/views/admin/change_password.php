@@ -12,7 +12,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Input Data Dosen</title>
+  <title>Ganti Password</title>
 
   <!-- Custom fonts for this template-->
   <link href="<?php echo base_url('assets/vendor/fontawesome-free/css/all.css');?>" rel="stylesheet" type="text/css">

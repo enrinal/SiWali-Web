@@ -9,7 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Profil</title>
+    <title>Beranda</title>
     <script type="text/javascript">
       var base_url_w = 'http://siakad.itera.ac.id/';
     </script>
@@ -37,7 +37,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="container content">
     <div class="row"><div class="col-md-3">
 
-</div><div class="col-md-9">
+</div>
+<div class="col-md-9">
 <div class="row">
     <div class="col-lg-4 col-xs-6">
         <!-- small box -->
