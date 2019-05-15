@@ -22,7 +22,7 @@
       <div class="col-md-offset-1">
         <a class="btn btn-default" href="<?php echo base_url(). 'dosen/konsultasi'; ?>" role="button">Open Ticket</a>
         <a class="btn btn-default" href="<?php echo base_url(). 'dosen/konsultasiclose'; ?>" role="button">Close Ticket</a>
-        <a href="<?php echo base_url('mahasiswa/tiket')?>">
+        
       </br> </br>
 
         <div class="card-body">
