@@ -23,7 +23,6 @@
         <a class="btn btn-default" href="<?php echo base_url(). 'dosen/konsultasi'; ?>" role="button">Open Ticket</a>
         <a class="btn btn-default" href="<?php echo base_url(). 'dosen/konsultasiclose'; ?>" role="button">Close Ticket</a>
         <a href="<?php echo base_url('mahasiswa/tiket')?>">
-        <button class="btn btn-primary create">Create New Ticket</button></a>
       </br> </br>
 
         <div class="card-body">

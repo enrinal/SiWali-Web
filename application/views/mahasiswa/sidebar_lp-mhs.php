@@ -22,7 +22,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="list-group">
           <a href="<?php echo base_url('mahasiswa');?>" class="list-group-item">
             <i class="fa fa-home sps"></i>Beranda
-          <a href="" class="list-group-item">
+          <a href="<?php echo base_url('mahasiswa/konsultasi');?>" class="list-group-item">
             <i class="fa fa-user-shield sps"></i>Konsultasi
           </a>
           <a href="<?php echo base_url('mahasiswa/uploadip');?>" class="list-group-item">
