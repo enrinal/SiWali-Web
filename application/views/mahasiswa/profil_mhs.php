@@ -70,7 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   						</div>
   					</div><br>
 
-  					<label class="col-sm-2 col-sm-offset-4 text-left">Dosen Wali</label>
+  					<label class="col-sm-2  text-left">Dosen Wali</label>
   					<label class="col-sm-1 text-right"></label>
   					<div>
   						<div class="input-group">
