@@ -35,7 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   			</div>
 				<form class="g-py-15" name="updateProfile" role="form" data-toggle="validator" class="form-horizontal" action="<?php echo base_url()?>mahasiswa/update" method="POST" enctype="multipart/form-data">
   				<div class="col-sm-11 form-group">
-  					
+
 
   					<label class="col-sm-2 text-left">Nama</label>
   					<label class="col-sm-1 text-right"></label>
@@ -81,7 +81,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   						</div>
   					</div><br>
 
-						<label class="col-sm-2 col-sm-offset-4 text-left">Nama Wali</label>
+						<label class="col-sm-2 text-left">Nama Wali</label>
   					<label class="col-sm-1 text-right"></label>
   					<div>
   						<div class="input-group">
@@ -92,7 +92,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   						</div>
   					</div><br>
 
-						<label class="col-sm-2 col-sm-offset-4 text-left">No Telp Wali</label>
+						<label class="col-sm-2 text-left">No Telp Wali</label>
   					<label class="col-sm-1 text-right"></label>
   					<div>
   						<div class="input-group">
@@ -103,7 +103,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   						</div>
   					</div><br>
 
-						<label class="col-sm-2 col-sm-offset-4 text-left">Email</label>
+						<label class="col-sm-2  text-left">Email</label>
   					<label class="col-sm-1 text-right"></label>
   					<div>
   						<div class="input-group">
