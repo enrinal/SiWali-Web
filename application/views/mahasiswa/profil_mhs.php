@@ -35,12 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   			</div>
 				<form class="g-py-15" name="updateProfile" role="form" data-toggle="validator" class="form-horizontal" action="<?php echo base_url()?>mahasiswa/update" method="POST" enctype="multipart/form-data">
   				<div class="col-sm-11 form-group">
-  					<div class="col-sm-4">
-  						<img src="<?php echo base_url('assets/css/image/avatar.png')?>" class="avatar img-circle img-thumbnail">
-  						<br> <br>
-
-  						<input class="up-file" type="file">
-  					</div>
+  					
 
   					<label class="col-sm-2 text-left">Nama</label>
   					<label class="col-sm-1 text-right"></label>
